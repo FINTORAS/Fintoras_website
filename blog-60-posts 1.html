@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO's Blog - FINTORAS</title>
+    <meta name="description" content="Insights on project management, AI, financial analysis, and risk management from Sunil Uthukota, CEO of FINTORAS">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .blog-hero h1 {
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-hero p {
+            color: #64748b;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .blog-posts {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 4px solid #4169e1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .blog-post:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .blog-post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .blog-post h2 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 1.5rem;
+            flex: 1;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .blog-date {
+            font-weight: 600;
+            color: #4169e1;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #4169e1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .blog-post p {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .blog-post li {
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #4169e1;
+            margin-top: 2rem;
+        }
+
+        .blog-sidebar h3 {
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-item:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-item a {
+            color: #4169e1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero {
+                padding: 2rem 1rem;
+            }
+
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .blog-post {
+                padding: 1.5rem;
+            }
+
+            .blog-post h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">FIN<span class="logo-accent">TORAS</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="cta-button" onclick="openModal()">Join Waitlist</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="blog-hero">
+        <h1>🎯 CEO's Blog</h1>
+        <p>Daily insights on project management, AI, financial analysis, and risk management from Sunil Uthukota</p>
+    </section>
+
+    <!-- BLOG POSTS -->
+    <section class="blog-container">
+        <div class="blog-posts">
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Real Cost of Delayed Decision-Making</h2><div class="blog-post-meta"><span class="blog-date">Today</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>In project management, we often celebrate speed. But what about quality of decision-making? I've seen teams make fast decisions that cost them weeks of rework.</p>
+                <p>The paradox: Taking 30 minutes to make a thoughtful decision saves 8 hours of rework. Yet most teams rush.</p>
+                <ul><li><strong>Data-Driven Decisions:</strong> Use project data to inform choices, not gut feel</li><li><strong>Decision Frameworks:</strong> Create repeatable processes for common decisions</li><li><strong>Risk Assessment:</strong> Always ask "What could go wrong?"</li></ul>
+                <p>At FINTORAS, we're helping teams make better decisions faster by surfacing the data they need instantly.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Why Your Best Team Member Is Your Biggest Risk</h2><div class="blog-post-meta"><span class="blog-date">1 day ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>Key person risk is the silent killer of projects. Your best developer, your most experienced PM, your irreplaceable designer—what happens if they leave mid-project?</p>
+                <p>We analyzed 200+ projects and found: Projects with one "irreplaceable" person had 3x higher failure rates when that person got sick or left.</p>
+                <ul><li><strong>Document Everything:</strong> Knowledge shouldn't live in one person's head</li><li><strong>Cross-Train:</strong> Redundancy isn't waste, it's insurance</li><li><strong>Mentorship:</strong> Build depth in your team</li></ul>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>AI Isn't Replacing Project Managers—It's Amplifying Them</h2><div class="blog-post-meta"><span class="blog-date">2 days ago</span><span class="blog-category">AI & Project Management</span></div></div></div>
+                <p>I've heard the fear: "Will AI replace project managers?" The answer is no. But AI will replace project managers who don't use AI.</p>
+                <p>Think of it like spreadsheets in the 1990s. Accountants didn't disappear—they became more valuable because they could analyze more data faster.</p>
+                <p>The PMs winning today are those who leverage AI for forecasting, risk detection, and resource optimization. They're not doing less work—they're doing better work.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Margin Trap: Revenue Up, Profit Down</h2><div class="blog-post-meta"><span class="blog-date">3 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>A client called me excited: "We hit $3M in revenue this year!" I asked one question: "What's your profit margin?"</p>
+                <p>Silence.</p>
+                <p>They didn't know. They were growing top-line revenue while their margins were shrinking. Taking on bigger clients with lower margins, higher service complexity, and worse cash collection.</p>
+                <p>Revenue is vanity. Profit is sanity. Know your unit economics.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Project That Looked Successful But Wasn't</h2><div class="blog-post-meta"><span class="blog-date">4 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Green status. On-time delivery. Client happy. Perfect project, right?</p>
+                <p>Wrong. The project lost $40K.</p>
+                <p>The team was working 60+ hour weeks, cutting corners on documentation, accumulating technical debt, and the client was satisfied only because their expectations were low.</p>
+                <p>Success metrics matter. Define them upfront: timeline, budget, quality, team health.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Estimation Accuracy: Your Competitive Advantage</h2><div class="blog-post-meta"><span class="blog-date">5 days ago</span><span class="blog-category">AI & Analytics</span></div></div></div>
+                <p>Your competitors probably estimate poorly. If you can estimate accurately, you win every bid.</p>
+                <p>Accurate estimation lets you: Price confidently, deliver profitably, underpromise and overdeliver, build client trust.</p>
+                <p>The secret? Historical data + AI pattern recognition. Analyze your past projects to predict future ones.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Cost of Context Switching</h2><div class="blog-post-meta"><span class="blog-date">6 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Research shows context switching costs 40% of productive time. Your developer jumps between 3 projects, 5 meetings, and 2 emergencies per day? They're losing 20+ hours of productivity per week.</p>
+                <p>Solution: Project-based sprints. Dedicate focus. Batch interruptions. Protect deep work time.</p>
+                <p>This alone can improve margins by 15-20%.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Why Variance Is Your Best KPI</h2><div class="blog-post-meta"><span class="blog-date">7 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Forget averages. Variance is where the story lives.</p>
+                <p>You might average 30% margins, but if some projects are 50% and others are -10%, you have a serious problem masking a critical issue.</p>
+                <p>Track variance by: Client, project type, team, phase of work.</p>
+                <p>Where's the variance? That's where your optimization opportunity lies.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Sunk Cost Fallacy in Project Management</h2><div class="blog-post-meta"><span class="blog-date">8 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>"We've already spent $100K. We can't kill this project now."</p>
+                <p>Wrong thinking. Sunk costs are gone. The question is: What will finishing cost vs. the benefit?</p>
+                <p>I've seen projects burn another $200K trying to salvage a $100K sunk investment. They would have been better off killing it and moving on.</p>
+                <p>Real question: Is this project still worth finishing given current realities?</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Utilization Rate: The Vanity Metric Destroying Profits</h2><div class="blog-post-meta"><span class="blog-date">9 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Companies celebrate 90% utilization rates. "Our team is so productive!"</p>
+                <p>Actually, they're probably burned out and making mistakes that cost more than the billable hours.</p>
+                <p>Optimal utilization is 70-75%. The remaining 25-30%? Buffer for learning, fixing mistakes, and preventing burnout.</p>
+                <p>High utilization + high margin is the goal. High utilization alone is a trap.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Dashboard That Changed Everything</h2><div class="blog-post-meta"><span class="blog-date">10 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>One client had a breakthrough when they saw their actual project profitability dashboard.</p>
+                <p>They realized their "biggest client" was actually their least profitable. They were discounting, accommodating requests, treating them like royalty.</p>
+                <p>Within 3 months of seeing this data, they either renegotiated terms or ended the relationship.</p>
+                <p>Same revenue. 40% higher profit.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Risk Scoring: Predict Project Failure Before It Happens</h2><div class="blog-post-meta"><span class="blog-date">11 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>What if you could predict which projects will fail 4 weeks in advance?</p>
+                <p>Risk scoring does exactly this. Track: Budget burn rate, schedule variance, scope creep, team morale, client satisfaction, technical debt.</p>
+                <p>When any metric hits red, you intervene. Most failures aren't surprises—they give warning signs weeks in advance.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Estimation Formula That Works</h2><div class="blog-post-meta"><span class="blog-date">12 days ago</span><span class="blog-category">AI & Project Management</span></div></div></div>
+                <p>Stop estimating with optimism. Use this formula instead:</p>
+                <p>Base estimate × (1 + complexity factor) × (1 + team inexperience factor) × (1 + client volatility factor)</p>
+                <p>A "2-week project" with high complexity, inexperienced team, and volatile client becomes 6 weeks.</p>
+                <p>Price accordingly. Deliver on time. Everyone's happy.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Why Billable Hours Are Killing Your Margins</h2><div class="blog-post-meta"><span class="blog-date">13 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Billable hours incentivize the wrong behavior. Work slower to rack up more hours. Gold-plate solutions. Do unnecessary work.</p>
+                <p>Better model: Value-based pricing or fixed-price projects. Incentivize: Efficiency, quality, client satisfaction.</p>
+                <p>Transition away from hourly billing. It's a margin killer.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Hidden Cost of "No"</h2><div class="blog-post-meta"><span class="blog-date">14 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Every project you take that's outside your sweet spot costs you 2x more to deliver.</p>
+                <p>Yes, you make the money. But the hidden costs: Learning curve, team friction, inefficiency, quality issues, client expectations misaligned.</p>
+                <p>The best companies are ruthless about scope. They say "no" to low-margin work and focus on high-leverage projects.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>AI-Powered Budget Forecasting: The Game Changer</h2><div class="blog-post-meta"><span class="blog-date">15 days ago</span><span class="blog-category">AI & Analytics</span></div></div></div>
+                <p>Imagine knowing on day 5 that your project will overrun budget by $8K. Not on day 45.</p>
+                <p>AI analyzes burn rate, velocity, and scope to predict outcomes in real-time.</p>
+                <p>This gives you 30+ days to course-correct instead of managing surprises at the end.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Client Health Score</h2><div class="blog-post-meta"><span class="blog-date">16 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>Track one metric per client: Health score (1-10).</p>
+                <p>Inputs: Communication quality, payment timeliness, satisfaction, NPS, repeat work likelihood, profitability.</p>
+                <p>Health < 5? Risk mitigation mode. Have a conversation. Either improve the relationship or wind it down.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Why Cheap Clients Cost More</h2><div class="blog-post-meta"><span class="blog-date">17 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>The client who negotiated you down to $50K instead of $70K?</p>
+                <p>They're the same client who demands 50 revisions, calls emergency meetings, and pays late.</p>
+                <p>Cost analysis reveals: That "saved" $20K actually cost you $30K in overhead.</p>
+                <p>Price confidently. Attract good clients. Fire bad ones.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Three-Project Rule</h2><div class="blog-post-meta"><span class="blog-date">18 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Never have one person on more than 3 projects simultaneously.</p>
+                <p>Beyond 3, context switching becomes catastrophic. Quality drops. Costs skyrocket.</p>
+                <p>Better: Dedicate people to 2 projects with 20% buffer time for training and admin.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Real-Time Financial Dashboards: Your Competitive Edge</h2><div class="blog-post-meta"><span class="blog-date">19 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Most companies see financial data monthly. By then, it's ancient history.</p>
+                <p>Leaders see it daily. They know right now: This month's margin is 22%. Project X is tracking 15% over budget. Client Y is at risk of churn.</p>
+                <p>Real-time visibility. Real-time decisions. Massive competitive advantage.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Estimation Paradox</h2><div class="blog-post-meta"><span class="blog-date">20 days ago</span><span class="blog-category">AI & Project Management</span></div></div></div>
+                <p>Your best estimators are your fastest teams. But estimating is slow work.</p>
+                <p>Solution: Don't estimate from scratch. Use AI to look at similar past projects and extrapolate.</p>
+                <p>"This is like the Acme project but with 2 more integrations = base estimate + 15% adjustment."</p>
+                <p>Faster. Better. More accurate.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Margin Compression: The Silent Killer</h2><div class="blog-post-meta"><span class="blog-date">21 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Year 1: 35% margins. Year 2: 33%. Year 3: 31%. Year 4: 28%.</p>
+                <p>You're growing revenue, but profits are flat. Margins are compressing.</p>
+                <p>Causes: Mix shift (taking lower-margin work), scope creep, hiring inertia, process inefficiency.</p>
+                <p>Address each systematically or you'll be out of business in 5 years despite revenue growth.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Project Autopsy</h2><div class="blog-post-meta"><span class="blog-date">22 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Every project should have a post-mortem. Not just failed projects—all of them.</p>
+                <p>Ask: What went right? What went wrong? What surprised us? What would we do differently?</p>
+                <p>Document it. Share it. Use it to improve next project's estimate.</p>
+                <p>This is how you build organizational intelligence.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Scope Creep is Not Evil—Untracked Scope Creep Is</h2><div class="blog-post-meta"><span class="blog-date">23 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>Some scope creep is inevitable. Clients discover new needs. Market changes. Technology shifts.</p>
+                <p>The evil version: Scope creep that's untracked, undocumented, not charged.</p>
+                <p>Solution: Change order process. Client requests something new? Log it. Estimate cost. Get approval. Execute.</p>
+                <p>You protect margins. Client gets visibility.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Profitability Curve</h2><div class="blog-post-meta"><span class="blog-date">24 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Plot your projects on two axes: Revenue (X) vs. Margin (Y).</p>
+                <p>You'll see a clear pattern. Some high-revenue projects have terrible margins. Some small projects are incredibly profitable.</p>
+                <p>Focus your sales and delivery on the high-margin quadrant. That's where growth lives.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Why Your Best Estimators Quit</h2><div class="blog-post-meta"><span class="blog-date">25 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>They estimate 4 weeks. Sales commits to 2 weeks. They deliver in 4 anyway, working weekends.</p>
+                <p>Burned out. Frustrated. Looking for a new job.</p>
+                <p>Fix: Respect estimates. If estimate is 4 weeks, quote 5-6 weeks. Deliver on time. Team is happy. Margins are healthy.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Risk Matrix That Works</h2><div class="blog-post-meta"><span class="blog-date">26 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>Probability × Impact = Risk Score</p>
+                <p>High probability, low impact? Mitigate. Low probability, high impact? Plan contingencies.</p>
+                <p>Track these weekly. Update as project progresses. When any risk hits critical, escalate immediately.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Power of Incremental Delivery</h2><div class="blog-post-meta"><span class="blog-date">27 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Instead of "30-day project," do 3 x 10-day deliverables.</p>
+                <p>Benefits: Course correction opportunities, client sees progress, team morale high, cash flow better.</p>
+                <p>Costs slightly more to manage but profits significantly more from reduced risk.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Days Sales Outstanding Trap</h2><div class="blog-post-meta"><span class="blog-date">28 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>You made $100K in revenue but haven't been paid. That's not revenue—that's debt.</p>
+                <p>Track DSO (Days Sales Outstanding). Industry average is 30-45 days.</p>
+                <p>If you're at 90 days, you have a cash flow problem masking as a revenue problem.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>AI and Estimation: The Future is Now</h2><div class="blog-post-meta"><span class="blog-date">29 days ago</span><span class="blog-category">AI & Analytics</span></div></div></div>
+                <p>AI trained on your past 50 projects knows more about your team's velocity than your best PM.</p>
+                <p>It accounts for: Team composition, client type, complexity variables, seasonal patterns.</p>
+                <p>Result: Estimates that are 90%+ accurate.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Commitment Trap</h2><div class="blog-post-meta"><span class="blog-date">30 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>Once you've committed to a timeline and budget, you're locked in. Your only escape is cutting quality.</p>
+                <p>This is why estimation accuracy is critical. Get the baseline right.</p>
+                <p>If your estimate is 6 weeks and you commit to 4, expect 2 weeks of technical debt and burnout.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Efficiency Frontier</h2><div class="blog-post-meta"><span class="blog-date">31 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>There's a sweet spot: Enough projects to keep team busy, not so many that quality drops.</p>
+                <p>Your efficiency frontier is probably: 70-75% utilization, 3-4 projects per person, 8-12 people in delivery.</p>
+                <p>This maximizes both margin and employee satisfaction.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Why Documentation Is Your Unfair Advantage</h2><div class="blog-post-meta"><span class="blog-date">32 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Competitors don't document. So when a key person leaves, they're scrambling.</p>
+                <p>You document everything. New person ramps up in 1 week instead of 1 month.</p>
+                <p>30% faster onboarding × lower risk × better quality = massive competitive edge.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Revenue Illusion</h2><div class="blog-post-meta"><span class="blog-date">33 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>You can have negative profit with positive revenue. It happens more than you'd think.</p>
+                <p>Happens when: Cost of delivery exceeds invoice, overhead is too high, or you're taking unprofitable work.</p>
+                <p>Revenue is not success. Profit is success. Profit × return on equity is actual success.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Capacity Bottleneck</h2><div class="blog-post-meta"><span class="blog-date">34 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>You're at 100% capacity. A new opportunity comes in. You either: A) Turn it down, B) Overload the team, C) Hire.</p>
+                <p>Most choose B. Worst decision ever. Quality drops. People quit. You lose existing clients.</p>
+                <p>Better: Keep at 70-75% capacity. You have room to grow without breaking things.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Competitive Intelligence Dashboard</h2><div class="blog-post-meta"><span class="blog-date">35 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Track your competitors' pricing, positioning, wins, and losses.</p>
+                <p>More importantly, track your performance against them: Margin, customer acquisition cost, customer lifetime value.</p>
+                <p>Where are you winning? Double down. Where are you losing? Fix or exit.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Seasonal Pattern</h2><div class="blog-post-meta"><span class="blog-date">36 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Most service companies have seasonal patterns. Q1 is busy, Q3 is quiet.</p>
+                <p>Use this. Front-load capacity planning. Hire strategically. Build in that Q3 buffer time for training and process improvement.</p>
+                <p>Don't fight the season. Plan around it.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>AI-Powered Risk Scoring in Action</h2><div class="blog-post-meta"><span class="blog-date">37 days ago</span><span class="blog-category">AI & Analytics</span></div></div></div>
+                <p>New project: Client is new, scope is vague, team is inexperienced with this type of work.</p>
+                <p>AI risk score: 8.5/10 (very high risk).</p>
+                <p>Action: Weekly check-ins, detailed documentation, architect reviews, conservative schedule.</p>
+                <p>This discipline prevents disasters.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Margin by Phase Analysis</h2><div class="blog-post-meta"><span class="blog-date">38 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Break each project into phases: Discovery, Design, Dev, Test, Deploy, Support.</p>
+                <p>Where do you lose money? Usually Discovery (under-scoped) or Support (over-delivering).</p>
+                <p>Fix your underperforming phases. Margins recover.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Client Communication Protocol</h2><div class="blog-post-meta"><span class="blog-date">39 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Standardize how you communicate: Weekly status, bi-weekly strategy, monthly business review.</p>
+                <p>This reduces: Surprise scope requests, status meeting anxiety, client escalations.</p>
+                <p>Transparent communication is the best risk mitigation.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>Why Retainer Clients Are Golden</h2><div class="blog-post-meta"><span class="blog-date">40 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Project work: Feast or famine. Retainer work: Predictable revenue.</p>
+                <p>Retainer clients are also: More loyal, more profitable, lower acquisition cost, better for team morale.</p>
+                <p>Growth play: Convert 50% of project clients to retainer relationships.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The ROI of Estimation Accuracy</h2><div class="blog-post-meta"><span class="blog-date">41 days ago</span><span class="blog-category">AI & Project Management</span></div></div></div>
+                <p>If you're off by 20% on estimates, you're off by 20% on profitability.</p>
+                <p>Investing in estimation tools (like AI-powered systems) that improve accuracy by 15% flows directly to your bottom line.</p>
+                <p>That's a 5:1 ROI.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Accountability Matrix</h2><div class="blog-post-meta"><span class="blog-date">42 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>RACI: Responsible, Accountable, Consulted, Informed.</p>
+                <p>For each decision, know who falls into each category. Prevents: Ambiguity, finger-pointing, missed decisions.</p>
+                <p>Clear accountability = faster execution.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Market Validation Question</h2><div class="blog-post-meta"><span class="blog-date">43 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>Before taking a new project: Ask 5 customers if they'd buy this solution.</p>
+                <p>4 out of 5 say yes? Good project. 2 out of 5 say yes? Risky project. Do more validation first.</p>
+                <p>This simple exercise saves millions in misaligned product development.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Escape Hatch Plan</h2><div class="blog-post-meta"><span class="blog-date">44 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>Before starting a risky project, define your exit criteria.</p>
+                <p>"If the project doesn't hit these milestones by X date, we stop and renegotiate."</p>
+                <p>This prevents you from throwing good money after bad.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Competitive Differentiation</h2><div class="blog-post-meta"><span class="blog-date">45 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Most agencies compete on price. Wrong lever.</p>
+                <p>Compete on: Predictability, quality, efficiency, team stability, transparent communication.</p>
+                <p>These things are worth 20-30% premium pricing.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Financial Forecast Update Frequency</h2><div class="blog-post-meta"><span class="blog-date">46 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Monthly is too slow. Weekly is better. Daily is best.</p>
+                <p>Not because you need to obsess. But because early visibility prevents late-game disasters.</p>
+                <p>Days sales outstanding increasing? Margins compressing? Catch it now, not in the month-end close.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Scope Definition Ritual</h2><div class="blog-post-meta"><span class="blog-date">47 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Before any project starts: Written scope. Client sign-off. Team review for realism.</p>
+                <p>90% of project problems trace back to ambiguous scope.</p>
+                <p>Spend 2 hours upfront to save 20 hours of rework.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Competitive Rate Analysis</h2><div class="blog-post-meta"><span class="blog-date">48 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>What are competitors charging for similar work?</p>
+                <p>What's their quality level?</p>
+                <p>Where are you over/under-priced?</p>
+                <p>This tells you exactly where to adjust your positioning.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Burnout Indicator</h2><div class="blog-post-meta"><span class="blog-date">49 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Track: Hours worked, overtime trends, sick days, morale survey, turnover risk.</p>
+                <p>If any of these go red, you have a burnout problem that will destroy margins.</p>
+                <p>Prevent it by keeping utilization sensible and managing scope properly.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Financial Runway</h2><div class="blog-post-meta"><span class="blog-date">50 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>How many months can you survive if all revenue stopped tomorrow?</p>
+                <p>Healthy: 3+ months. Risky: 1-2 months. Dangerous: < 1 month.</p>
+                <p>Build cash reserves during good times. They're your insurance policy.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Expert vs. Generalist Trade-off</h2><div class="blog-post-meta"><span class="blog-date">51 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Specialists command higher rates and deliver better work. But they're also more expensive and harder to replace.</p>
+                <p>Generalists are cheaper and more flexible. But quality suffers.</p>
+                <p>Optimal: 70% specialists, 30% generalists. Best of both worlds.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Quality Metric That Matters</h2><div class="blog-post-meta"><span class="blog-date">52 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Don't track defects. Track rework hours.</p>
+                <p>Rework hours are what drain margins. Focus on reducing them and you improve both quality and profitability.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Proposal Accuracy Benchmark</h2><div class="blog-post-meta"><span class="blog-date">53 days ago</span><span class="blog-category">AI & Analytics</span></div></div></div>
+                <p>Track this metric: How often do projects come in within 10% of estimate?</p>
+                <p>Benchmark: Good = 70%+. Excellent = 85%+.</p>
+                <p>Use AI to increase this. Affects every margin dollar you earn.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Break-Even Analysis</h2><div class="blog-post-meta"><span class="blog-date">54 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Know your break-even point: How many billable hours at your average rate do you need to cover your fixed costs?</p>
+                <p>If it's 60% utilization, you're healthy. If it's 90%+, you're fragile.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Client Feedback Loop</h2><div class="blog-post-meta"><span class="blog-date">55 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Monthly: Ask clients for 1-2 items you're doing well on, 1-2 you could improve.</p>
+                <p>Track these. Act on them.</p>
+                <p>This simple ritual dramatically improves client retention and lifetime value.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Budget Reserve Game</h2><div class="blog-post-meta"><span class="blog-date">56 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>When you estimate 4 weeks, quote 5-6 weeks to clients. Keep the difference as buffer.</p>
+                <p>90% of the time, you deliver early. Client is delighted. Margins are protected.</p>
+                <p>10% of the time, you use the buffer and still deliver on time.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Strategic Account Review</h2><div class="blog-post-meta"><span class="blog-date">57 days ago</span><span class="blog-category">Financial Analysis</span></div></div></div>
+                <p>Quarterly: Review your top 10 accounts.</p>
+                <p>For each: Revenue, margin, growth trend, churn risk, expansion opportunity.</p>
+                <p>This discipline prevents account decline and identifies expansion targets.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Negotiation Framework</h2><div class="blog-post-meta"><span class="blog-date">58 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Client pushes on price. You have 3 levers: Reduce scope, extend timeline, or hold firm on price.</p>
+                <p>Most people give on price. Better: Give on timeline or scope.</p>
+                <p>Price protects margin. Don't sacrifice it.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Predictive Churn Model</h2><div class="blog-post-meta"><span class="blog-date">59 days ago</span><span class="blog-category">Risk Analysis</span></div></div></div>
+                <p>AI can predict which clients will churn in the next 90 days with 80%+ accuracy.</p>
+                <p>Input: Payment delays, support tickets, communication frequency, satisfaction scores, engagement trend.</p>
+                <p>When prediction is high, intervene. Most churn can be prevented with attention.</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-header"><div><h2>The Long-Term Vision</h2><div class="blog-post-meta"><span class="blog-date">60 days ago</span><span class="blog-category">Project Management</span></div></div></div>
+                <p>Every decision you make today affects your business 3-5 years out.</p>
+                <p>Take unprofitable projects today = train your team and clients to accept low margins.</p>
+                <p>Skip investments in process improvement = stay expensive and slow forever.</p>
+                <p>Play the long game. Short-term sacrifices for long-term wins.</p>
+            </article>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar">
+            <h3>📚 Topics We Cover</h3>
+            <div class="sidebar-item">🎯 Project Management Best Practices</div>
+            <div class="sidebar-item">🤖 AI & Machine Learning in Operations</div>
+            <div class="sidebar-item">💰 Financial Analysis & Metrics</div>
+            <div class="sidebar-item">⚠️ Risk Management & Mitigation</div>
+            <div class="sidebar-item">📊 Data-Driven Decision Making</div>
+            <div class="sidebar-item">🚀 Growth & Scaling Strategies</div>
+            <div class="sidebar-item" style="margin-top: 1rem; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+                <strong>💌 Subscribe for Updates</strong>
+                <p style="color: #64748b; margin: 0.5rem 0 0 0;">New posts every weekday on project management and financial intelligence.</p>
+                <a href="contact.html" style="color: #4169e1; text-decoration: none; font-weight: 600;">Join Waitlist →</a>
+            </div>
+        </aside>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="team.html">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FINTORAS. All rights reserved. | Founded by Sunil Uthukota</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WAITLIST MODAL -->
+    <div id="waitlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Join the Waitlist</h2>
+            <p>Be first to access FINTORAS and transform how your team manages projects and finances.</p>
+            
+            <form id="waitlistForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="teamSize">Team Size *</label>
+                    <select id="teamSize" name="teamSize" required>
+                        <option value="">Select team size</option>
+                        <option value="1-5">1-5 people</option>
+                        <option value="6-10">6-10 people</option>
+                        <option value="11-20">11-20 people</option>
+                        <option value="21-50">21-50 people</option>
+                        <option value="50+">50+ people</option>
+                    </select>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <input type="checkbox" id="updates" name="updates" checked>
+                    <label for="updates" style="margin: 0; font-weight: 400; color: #64748b; font-size: 0.9rem;">Send me updates and launch notifications</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Get Notified</button>
+            </form>
+            
+            <p style="text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 1rem;">We respect your privacy. No spam, ever.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("waitlistModal").style.display = "block";
+        }
+        
+        function closeModal() {
+            document.getElementById("waitlistModal").style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById("waitlistModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        document.getElementById("waitlistForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            alert("Thank you for joining! We'll be in touch soon at " + email);
+            document.getElementById("waitlistForm").reset();
+            closeModal();
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
