@@ -69,7 +69,7 @@
           (PREVIEW ? " (Preview only: nothing was sent.)" : "");
       }).catch(function () {
         status.className = "form-status err";
-        status.textContent = "That didn't send. Check your connection and try again, or email hello@fintoras.com.";
+        status.textContent = "That didn't send. Check your connection and try again, or email info@fintoras.com.";
       }).then(function () {
         status.hidden = false;
         btn.disabled = false;
