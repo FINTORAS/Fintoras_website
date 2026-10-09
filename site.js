@@ -148,6 +148,8 @@
       calc.querySelector(".m-down").style.height = (r.margin < 0 ? share : 0) + "%";
 
       var left = Math.floor(r.hoursLeft);
+      var toGo = Math.round(r.projectedHours - v.logged);            // hours of work still to do
+      var slack = Math.floor(r.breakEvenHours - r.projectedHours);   // hours spare once the job is done
       var verdict;
       if (v.fee <= 0 || v.rate <= 0) {
         verdict = "Enter a fee and a cost per hour to see the margin.";
@@ -156,11 +158,15 @@
           whole.format(Math.floor(r.breakEvenHours)) + " hours, " + whole.format(-left) + " hours ago.";
       } else if (r.margin < 0) {
         verdict = "On this pace the project loses " + money.format(Math.abs(Math.round(r.profit))) +
-          ". The margin runs out " + whole.format(left) + " hours from now.";
+          ". It needs about " + whole.format(toGo) + " more hours, and the margin runs out after " + whole.format(left) + ".";
       } else if (r.margin < 15) {
-        verdict = "Thin. " + whole.format(Math.max(left, 0)) + " more hours and the margin is gone.";
+        verdict = toGo > 0
+          ? "Thin. The job needs about " + whole.format(toGo) + " more hours, which leaves only " + whole.format(Math.max(slack, 0)) + " hours of slack before break-even."
+          : "Thin. " + whole.format(Math.max(left, 0)) + " more hours and the margin is gone.";
       } else {
-        verdict = "Healthy. You have " + whole.format(left) + " hours of room before break-even.";
+        verdict = toGo > 0
+          ? "Healthy. The job needs about " + whole.format(toGo) + " more hours, which leaves " + whole.format(slack) + " hours of slack before break-even."
+          : "Healthy. You have " + whole.format(left) + " hours of room before break-even.";
       }
       out("verdict", verdict);
     }
