@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Contact | FINTORAS</title>
-<meta name="description" content="Get in touch with Fintoras: questions, demo requests and partnerships.">
+<title>Security | FINTORAS</title>
+<meta name="description" content="How Fintoras handles data: what is true of this website today, what is committed for launch, and what is still undecided.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FINTORAS">
-<meta property="og:title" content="Contact | FINTORAS">
-<meta property="og:description" content="Get in touch with Fintoras: questions, demo requests and partnerships.">
+<meta property="og:title" content="Security | FINTORAS">
+<meta property="og:description" content="How Fintoras handles data: what is true of this website today, what is committed for launch, and what is still undecided.">
 <meta name="theme-color" content="#0b1326">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/oxanium.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,7 +21,7 @@
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="FINTORAS home"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><clipPath id="brand-clip"><circle cx="11" cy="11" r="10"/></clipPath></defs><g clip-path="url(#brand-clip)"><path d="M0 0h22v9L0 14z" fill="var(--sky)"/><path d="M0 14l22-5v13H0z" fill="var(--earth)"/><path d="M0 14l22-5" stroke="var(--night)" stroke-width="1.5"/></g><circle cx="11" cy="11" r="10" fill="none" stroke="var(--ink)" stroke-width="1.5"/></svg><span>FINTORAS</span></a>
-    <nav class="nav" id="site-nav" aria-label="Main"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="calculator.html">Calculator</a><a href="fintorasblogs.html">Blog</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="contact.html" data-open="waitlist">Join the waitlist</a></nav>
+    <nav class="nav" id="site-nav" aria-label="Main"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="calculator.html">Calculator</a><a href="fintorasblogs.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html" data-open="waitlist">Join the waitlist</a></nav>
     <div class="head-tools">
       <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch between dark and light"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="btn btn-primary btn-small" href="contact.html" data-open="waitlist">Join the waitlist</a>
@@ -33,70 +33,42 @@
 <main id="main">
   <section class="page-head">
     <div class="wrap">
-      <h1>Talk to us</h1>
-      <p class="lede">Questions, demo requests and partnership ideas are all welcome. We usually reply within one working day.</p>
+      <h1>Security and your data</h1>
+      <p class="lede">What is true today, what is committed for launch, and what is still undecided. We would rather show you the gaps than hide them. Last updated 9 October 2026.</p>
       
     </div>
   </section>
-  <section class="band" aria-label="Contact">
-    <div class="wrap split" style="grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)">
-      <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-            data-ok="Message sent. We'll reply to {email}.">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hp"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <h2 class="h-sub">Send a message</h2>
-        <div class="form-2">
-          <div class="field"><label for="c-first">First name</label><input type="text" id="c-first" name="firstName" autocomplete="given-name" required></div>
-          <div class="field"><label for="c-last">Last name</label><input type="text" id="c-last" name="lastName" autocomplete="family-name" required></div>
-          <div class="field"><label for="c-email">Email</label><input type="email" id="c-email" name="email" autocomplete="email" required></div>
-          <div class="field"><label for="c-company">Company <span class="muted">(optional)</span></label><input type="text" id="c-company" name="company" autocomplete="organization"></div>
-        </div>
-        <div class="field"><label for="c-subject">What is this about?</label>
-          <select id="c-subject" name="subject" required>
-            <option value="">Choose one</option>
-            <option value="Demo">Request a demo</option>
-            <option value="Question">General question</option>
-            <option value="Partnership">Partnership</option>
-            <option value="Careers">Working at Fintoras</option>
-            <option value="Other">Something else</option>
-          </select>
-        </div>
-        <div class="field"><label for="c-message">Message</label><textarea id="c-message" name="message" required></textarea></div>
-        <label class="check" for="c-privacy"><input type="checkbox" id="c-privacy" name="privacy" value="agreed" required> <span>I agree to the <a href="privacy.html">privacy notice</a>.</span></label>
-        <div><button class="btn btn-primary" type="submit">Send message</button></div>
-        <p class="form-status" role="status" hidden></p>
-      </form>
-      <div class="stack">
-        <h2 class="h-sub">Or write directly</h2>
-        <ul class="contact-list">
-          <li><span>General</span><a href="mailto:hello@fintoras.com">hello@fintoras.com</a></li>
-          <li><span>Sales</span><a href="mailto:sales@fintoras.com">sales@fintoras.com</a></li>
-          <li><span>Support</span><a href="mailto:support@fintoras.com">support@fintoras.com</a></li>
-          <li><span>Where we are</span><b>Remote, based in the United States</b></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="band band-panel" aria-labelledby="cfaq-title">
+  <section class="band" aria-labelledby="sec-today">
     <div class="wrap split">
-      <h2 id="cfaq-title">Common questions</h2>
-      <div class="faq"><details><summary>How do I get early access?</summary><p>Join the waitlist and we'll email you when early access opens.</p></details><details><summary>Can I see a demo?</summary><p>While the product is in development we are showing it to a small number of teams. Choose Request a demo in the form and tell us a little about yours.</p></details><details><summary>Do I have to replace the tools I use today?</summary><p>No. CSV import and an API are both planned for launch, so you can bring projects, hours and costs in from the tools you already use. Tell us which ones and we'll take it into account.</p></details><details><summary>How will my financial data be protected?</summary><p>Customer data will be encrypted in transit and at rest. The <a href="security.html">security page</a> sets out what is decided and what is still open.</p></details><details><summary>Will there be an API?</summary><p>Yes. API access is planned for launch on the Professional plan and above.</p></details><details><summary>What will it cost?</summary><p>The planned prices are on the <a href="pricing.html">pricing page</a>, along with answers about trials, billing and cancelling.</p></details></div>
+      <div class="stack"><h2 id="sec-today">This website today</h2><p class="muted">Fintoras the product has not launched, so the only data we hold is what you send through this site.</p></div>
+      <ul class="rows"><li><h3>Served over HTTPS</h3><p>Every page on fintoras.com is delivered over an encrypted connection.</p></li><li><h3>No cookies or trackers</h3><p>The site sets no cookies and runs no analytics or advertising scripts.</p></li><li><h3>Waitlist and contact forms</h3><p>What you enter is stored by Netlify, our website host, on our behalf. We use it only to contact you about Fintoras.</p></li><li><h3>The calculator</h3><p>It runs entirely in your browser. The figures you type are never sent to us.</p></li></ul>
     </div>
   </section>
 
-  <section class="closing band" aria-labelledby="closing-title">
-    <div class="wrap">
+  <section class="band band-panel" aria-labelledby="sec-launch">
+    <div class="wrap split">
+      <div class="stack"><h2 id="sec-launch">Committed for launch</h2><p class="muted">Launch is planned by the end of Q1 2027.</p></div>
+      <ul class="rows"><li><h3>Encryption</h3><p>Customer data will be encrypted in transit and at rest.</p></li><li><h3>Testing before launch</h3><p>We are testing the AI on our own proprietary data and with a small group of volunteer companies before anyone relies on it.</p></li></ul>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="sec-open">
+    <div class="wrap split">
+      <div class="stack"><h2 id="sec-open">Not decided yet</h2><p class="muted">These are open. We will state our position on each one on this page before the first customer account opens.</p></div>
+      <ul class="rows"><li><h3>Hosting provider and data location</h3><p>Not chosen yet. We will name the provider and the region where data is stored.</p></li><li><h3>Who can see cost rates</h3><p>Per-person cost rates are sensitive. We will set out how access to them is controlled inside a customer's account.</p></li><li><h3>Backups, export and deletion</h3><p>How often data is backed up, and how you take your data out or have it deleted.</p></li><li><h3>Independent audit</h3><p>Whether and when a third-party security audit will be carried out.</p></li></ul>
+    </div>
+  </section>
+
+  <section class="band band-rule" aria-labelledby="sec-ask">
+    <div class="wrap split">
+      <h2 id="sec-ask">Ask us directly</h2>
       <div class="stack">
-        <h2 id="closing-title">Get early access when it opens</h2>
-        <p class="lede">We plan to launch by the end of Q1 2027. The waitlist hears first.</p>
-      </div>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="contact.html" data-open="waitlist">Join the waitlist</a>
-        <a class="btn btn-quiet" href="calculator.html">Try the calculator</a>
+        <p class="muted">If your team needs an answer that isn't here before it can consider Fintoras, tell us what it is. It helps us decide what to settle first.</p>
+        <div><a class="btn btn-primary" href="contact.html">Send a question</a></div>
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="site-foot">

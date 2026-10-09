@@ -263,6 +263,7 @@ ul, ol { margin: 0; padding: 0; }
   border: 1px solid var(--line); color: var(--muted); white-space: nowrap;
 }
 .chip-warn { border-color: var(--earth); color: var(--earth); }
+.chip-status { font-size: 0.8125rem; padding: 0.4rem 0.75rem; color: var(--ink); }
 .horizon-tag {
   position: absolute; left: 0; top: 0.45rem;
   font: 500 0.75rem/1 var(--display); color: var(--faint);

@@ -195,7 +195,7 @@
       if (!n || n < 1) { planOut.textContent = "Enter your team size."; plan = ""; }
       else if (n <= 5) { plan = "starter"; why = "Starter covers up to 5 people and 10 active projects."; }
       else if (n <= 20) { plan = "professional"; why = "Professional covers up to 20 people with unlimited projects."; }
-      else { plan = "enterprise"; why = "Enterprise is for more than 20 people. We'll price it with you."; }
+      else { plan = "enterprise"; why = "Larger teams, more than 20 people, are priced with you. Get in touch."; }
       if (plan) planOut.textContent = why;
       document.querySelectorAll(".tier").forEach(function (t) {
         t.classList.toggle("pick-me", t.getAttribute("data-plan") === plan);
