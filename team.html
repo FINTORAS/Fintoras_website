@@ -1,323 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - FINTORAS</title>
-    <meta name="description" content="Meet the FINTORAS team. Led by CEO & Founder Sunil Uthukota, we're building the future of project management.">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Team | FINTORAS</title>
+<meta name="description" content="Meet Sunil Uthukota, founder and CEO of Fintoras, and find out how to join the team.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FINTORAS">
+<meta property="og:title" content="Team | FINTORAS">
+<meta property="og:description" content="Meet Sunil Uthukota, founder and CEO of Fintoras, and find out how to join the team.">
+<meta name="theme-color" content="#0b1326">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/oxanium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>try{var t=localStorage.getItem("fintoras-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body>
-    <!-- HEADER & NAVIGATION -->
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">FIN<span class="logo-accent">TORAS</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="team.html" class="active">Team</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="fintorasblogs.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button class="cta-button" onclick="openModal()">Join Waitlist</button></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-container">
-            <h1>Meet the <span class="accent">Team Behind</span> FINTORAS</h1>
-            <p>Passionate builders on a mission to transform how small teams manage projects and finances.</p>
-        </div>
-    </section>
-
-    <!-- TEAM SECTION -->
-    <section class="section section-light">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2>Our Leadership</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 1rem auto;">Led by experienced entrepreneurs and engineers dedicated to solving real problems for small teams.</p>
-            </div>
-
-            <div class="team-grid">
-                <!-- SUNIL - CEO & FOUNDER -->
-                <div class="team-member" style="grid-column: 1 / -1; max-width: 700px; margin: 0 auto;">
-                    <div class="team-member-avatar" style="width: 160px; height: 160px; font-size: 70px;">👨‍💼</div>
-                    <h3>Sunil Uthukota</h3>
-                    <div class="role">CEO & Founder</div>
-                    
-                    <div style="text-align: left; margin: 2rem 0;">
-                        <h4 style="margin-bottom: 1rem; text-align: center; color: #14b8a6;">Leadership Philosophy</h4>
-                        <p class="bio" style="margin-bottom: 1rem;">
-                            Sunil is the founder and CEO of FINTORAS, leading the mission to transform how small teams manage projects and finances. With extensive experience across multiple industries, he identified a critical gap in the market: small teams have access to powerful project management tools and accounting software, but no unified platform that combines both with intelligent insights.
-                        </p>
-                    </div>
-
-                    <div style="background: #f0f7ff; border-left: 4px solid #4169E1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; text-align: left;">
-                        <p class="bio" style="margin: 0; font-style: italic;">
-                            "The biggest challenge for small teams isn't complexity—it's fragmentation. They're drowning in tools that don't talk to each other. FINTORAS changes that. We're building the single source of truth for project success: one platform that shows you exactly which projects make money and why."
-                        </p>
-                    </div>
-
-                    <div style="text-align: left; margin: 2rem 0;">
-                        <h4 style="margin-bottom: 1rem;">Vision & Impact</h4>
-                        <p class="bio">
-                            Sunil's vision for FINTORAS goes beyond software. He's committed to democratizing financial intelligence for teams of all sizes. His focus is on building products that are powerful enough for professionals, yet simple enough for anyone to use. Under his leadership, FINTORAS is becoming the operating system for small teams that need to compete and scale.
-                        </p>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                        <div style="text-align: center;">
-                            <div style="font-size: 28px; font-weight: 700; color: #4169E1;">Entrepreneur</div>
-                            <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">Multiple ventures across industries</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 28px; font-weight: 700; color: #4169E1;">US Based</div>
-                            <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">Remote-first, globally focused</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 28px; font-weight: 700; color: #4169E1;">Problem Solver</div>
-                            <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">Passionate about operational excellence</p>
-                        </div>
-                    </div>
-
-                    <div class="social" style="margin-top: 2rem;">
-                        <a href="#" title="LinkedIn">🔗</a>
-                        <a href="#" title="Twitter">𝕏</a>
-                        <a href="mailto:sunil@fintoras.com" title="Email">✉️</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- COMING SOON -->
-            <div style="background: linear-gradient(135deg, #f0f7ff 0%, #f0f9fc 100%); border: 2px dashed #14b8a6; border-radius: 16px; padding: 3rem 2rem; text-align: center; margin-top: 4rem;">
-                <h3 style="margin-bottom: 1rem;">Expanding Our Team</h3>
-                <p class="text-muted" style="font-size: 1.05rem;">We're building the perfect team to bring FINTORAS to life. If you're passionate about helping small teams succeed, we'd love to hear from you.</p>
-                <a href="contact.html" class="cta-button" style="margin-top: 1.5rem;">Get in Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPANY CULTURE -->
-    <section class="section section-dark">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2>Our Culture</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 1rem auto;">We're building a company where great ideas flourish and customers succeed.</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #14b8a6;">
-                    <h4 style="margin-bottom: 0.75rem;">Customer-First</h4>
-                    <p class="text-muted">We listen closely to our users and build solutions that actually solve their problems.</p>
-                </div>
-
-                <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #14b8a6;">
-                    <h4 style="margin-bottom: 0.75rem;">Radical Transparency</h4>
-                    <p class="text-muted">Honest communication with our team and customers is the foundation of trust.</p>
-                </div>
-
-                <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #14b8a6;">
-                    <h4 style="margin-bottom: 0.75rem;">Continuous Learning</h4>
-                    <p class="text-muted">We invest in ourselves and each other to stay at the forefront of innovation.</p>
-                </div>
-
-                <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #14b8a6;">
-                    <h4 style="margin-bottom: 0.75rem;">Impact-Driven</h4>
-                    <p class="text-muted">Every decision is guided by how it impacts our customers and their success.</p>
-                </div>
-
-                <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #14b8a6;">
-                    <h4 style="margin-bottom: 0.75rem;">Quality Focus</h4>
-                    <p class="text-muted">We take pride in building products that are elegant, intuitive, and reliable.</p>
-                </div>
-
-                <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #14b8a6;">
-                    <h4 style="margin-bottom: 0.75rem;">Collaboration</h4>
-                    <p class="text-muted">We believe the best ideas come from diverse perspectives working together.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY JOIN US -->
-    <section class="section section-light">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2>Why Join FINTORAS?</h2>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 1rem;">🚀</div>
-                    <h4>Solve Real Problems</h4>
-                    <p class="text-muted">Your work directly impacts thousands of small teams building great companies.</p>
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 1rem;">📈</div>
-                    <h4>Growth Opportunity</h4>
-                    <p class="text-muted">Be part of a fast-growing company where your contributions make a difference.</p>
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 1rem;">💡</div>
-                    <h4>Innovation</h4>
-                    <p class="text-muted">Work with cutting-edge technology and be at the forefront of AI and analytics.</p>
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 1rem;">🌍</div>
-                    <h4>Remote-First</h4>
-                    <p class="text-muted">Work from anywhere with a distributed team spread across the globe.</p>
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 1rem;">🤝</div>
-                    <h4>Great People</h4>
-                    <p class="text-muted">Join a team of smart, passionate people who care about quality and impact.</p>
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 1rem;">💰</div>
-                    <h4>Competitive Comp</h4>
-                    <p class="text-muted">Competitive salary, equity, and benefits because we value top talent.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section section-dark">
-        <div class="container">
-            <div style="text-align: center;">
-                <h2>Interested in Joining Us?</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 1rem auto; font-size: 1.1rem;">We're always looking for talented individuals passionate about helping small teams succeed. Reach out to learn more about opportunities.</p>
-                <a href="contact.html" class="cta-button" style="margin-top: 2rem;">Get in Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Product</h3>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="team.html">Team</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="about.html">Our Story</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 FINTORAS. All rights reserved. | Founded by Sunil Uthukota</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WAITLIST MODAL -->
-    <div id="waitlistModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Join the Waitlist</h2>
-            <p>Be first to access FINTORAS and transform how your team manages projects and finances.</p>
-            
-            <form id="waitlistForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                
-                <div class="form-group">
-                    <label for="teamSize">Team Size *</label>
-                    <select id="teamSize" name="teamSize" required>
-                        <option value="">Select team size</option>
-                        <option value="1-5">1-5 people</option>
-                        <option value="6-10">6-10 people</option>
-                        <option value="11-20">11-20 people</option>
-                        <option value="21-50">21-50 people</option>
-                        <option value="50+">50+ people</option>
-                    </select>
-                </div>
-                
-                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                    <input type="checkbox" id="updates" name="updates" checked>
-                    <label for="updates" style="margin: 0; font-weight: 400; color: #64748b; font-size: 0.9rem;">Send me updates and launch notifications</label>
-                </div>
-                
-                <button type="submit" class="submit-btn">Get Notified</button>
-            </form>
-            
-            <p style="text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 1rem;">We respect your privacy. No spam, ever.</p>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="FINTORAS home"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><clipPath id="brand-clip"><circle cx="11" cy="11" r="10"/></clipPath></defs><g clip-path="url(#brand-clip)"><path d="M0 0h22v9L0 14z" fill="var(--sky)"/><path d="M0 14l22-5v13H0z" fill="var(--earth)"/><path d="M0 14l22-5" stroke="var(--night)" stroke-width="1.5"/></g><circle cx="11" cy="11" r="10" fill="none" stroke="var(--ink)" stroke-width="1.5"/></svg><span>FINTORAS</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="calculator.html">Calculator</a><a href="fintorasblogs.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html" data-open="waitlist">Join the waitlist</a></nav>
+    <div class="head-tools">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch between dark and light"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <a class="btn btn-primary btn-small" href="contact.html" data-open="waitlist">Join the waitlist</a>
+      <button class="icon-btn menu-btn" type="button" data-menu aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
+  </div>
+</header>
 
-    <script>
-        function openModal() {
-            document.getElementById("waitlistModal").style.display = "block";
-        }
-        
-        function closeModal() {
-            document.getElementById("waitlistModal").style.display = "none";
-        }
-        
-        window.onclick = function(event) {
-            var modal = document.getElementById("waitlistModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        
-        document.getElementById("waitlistForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            
-            alert("Thank you for joining! We'll be in touch soon at " + email);
-            document.getElementById("waitlistForm").reset();
-            closeModal();
-        });
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <h1>Who is building Fintoras</h1>
+      <p class="lede">A small company on a mission to change how small teams manage projects and finances.</p>
+      
+    </div>
+  </section>
+  <section class="band" aria-labelledby="founder-name">
+    <div class="wrap split">
+      <div class="stack">
+        <span class="mono-mark lg" aria-hidden="true">SU</span>
+        <div class="stack" style="gap:.35rem">
+          <h2 id="founder-name">Sunil Uthukota</h2>
+          <p class="muted">Founder and CEO</p>
+        </div>
+        <p><a href="mailto:sunil@fintoras.com">sunil@fintoras.com</a></p>
+      </div>
+      <div class="stack-lg">
+        <div class="stack">
+          <p>Sunil is the founder and CEO of Fintoras, leading the mission to change how small teams manage projects and finances. With experience across several industries, he identified a gap in the market: small teams have powerful project management tools and accounting software, but no single platform that combines the two with intelligent insight.</p>
+          <p class="muted">His vision for Fintoras goes beyond software. He is committed to making financial intelligence available to teams of every size, and to building products that are powerful enough for professionals yet simple enough for anyone to use.</p>
+        </div>
+        <figure class="pull" style="margin:0">
+          <blockquote>The biggest challenge for small teams isn't complexity—it's fragmentation. They're drowning in tools that don't talk to each other. FINTORAS changes that. We're building the single source of truth for project success: one platform that shows you exactly which projects make money and why.</blockquote>
+        </figure>
+        <dl class="facts">
+          <div><dt>Entrepreneur</dt><dd>Multiple ventures across industries</dd></div>
+          <div><dt>US based</dt><dd>Remote-first, globally focused</dd></div>
+          <div><dt>Problem solver</dt><dd>Passionate about operational excellence</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-        // Set active nav link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
-            }
-        });
-    </script>
+  <section class="band band-panel" aria-labelledby="hiring-title">
+    <div class="wrap split">
+      <div class="stack">
+        <h2 id="hiring-title">We're building the team</h2>
+        <p class="muted">If you care about helping small teams succeed, we'd like to hear from you, whether or not a role is advertised.</p>
+        <div><a class="btn btn-primary" href="contact.html">Get in touch</a></div>
+      </div>
+      <ul class="rows"><li><h3>Solve real problems</h3><p>Your work decides whether a small business knows which of its projects pay.</p></li><li><h3>Start early</h3><p>Join while the product and the company are still taking shape, and help set the direction.</p></li><li><h3>New technology</h3><p>Work on AI and analytics applied to a plain, practical question.</p></li><li><h3>Remote-first</h3><p>Work from wherever you do your best work.</p></li><li><h3>Good people</h3><p>Work with people who care about quality and impact.</p></li><li><h3>Fair pay</h3><p>Competitive salary, equity and benefits.</p></li></ul>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="culture-title">
+    <div class="wrap split">
+      <div class="stack"><h2 id="culture-title">How we work</h2><p class="muted">The culture we are setting from the first hire.</p></div>
+      <ul class="rows"><li><h3>Customer-first</h3><p>We listen closely to our users and build solutions that actually solve their problems.</p></li><li><h3>Radical transparency</h3><p>Honest communication with our team and customers is the foundation of trust.</p></li><li><h3>Continuous learning</h3><p>We invest in ourselves and each other to stay at the forefront.</p></li><li><h3>Impact-driven</h3><p>Every decision is guided by how it affects our customers and their success.</p></li><li><h3>Quality focus</h3><p>We take pride in building products that are elegant, intuitive and reliable.</p></li><li><h3>Collaboration</h3><p>The best ideas come from different perspectives working together.</p></li></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="stack">
+        <a class="brand" href="index.html" aria-label="FINTORAS home"><span>FINTORAS</span></a>
+        <p class="measure">Project management and project finances in one place, for small teams who need to know which work pays.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="calculator.html">Profit calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="fintorasblogs.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://github.com/FINTORAS" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 FINTORAS. Founded by Sunil Uthukota.</span>
+      <span>In development. The waitlist is open.</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="sheet" id="waitlist" aria-labelledby="waitlist-title">
+  <div class="sheet-body">
+    <div class="sheet-top">
+      <div class="stack">
+        <h2 id="waitlist-title">Join the waitlist</h2>
+        <p class="muted">We'll email you when early access opens. Nothing else, unless you ask for updates.</p>
+      </div>
+      <button class="icon-btn" type="button" data-close aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <form class="form" name="waitlist" method="POST" action="index.html" data-netlify="true" netlify-honeypot="bot-field"
+          data-ok="You're on the waitlist. We'll email {email} when early access opens.">
+      <input type="hidden" name="form-name" value="waitlist">
+      <p class="hp"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="form-2">
+        <div class="field"><label for="wl-name">Full name</label><input type="text" id="wl-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="wl-email">Work email</label><input type="email" id="wl-email" name="email" autocomplete="email" required></div>
+        <div class="field"><label for="wl-company">Company <span class="muted">(optional)</span></label><input type="text" id="wl-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="wl-size">Team size</label>
+          <select id="wl-size" name="teamSize" required>
+            <option value="">Choose one</option>
+            <option value="1-5">1 to 5 people</option>
+            <option value="6-10">6 to 10 people</option>
+            <option value="11-20">11 to 20 people</option>
+            <option value="21-50">21 to 50 people</option>
+            <option value="50+">More than 50</option>
+          </select>
+        </div>
+      </div>
+      <label class="check" for="wl-updates"><input type="checkbox" id="wl-updates" name="updates" value="yes"> Also send me product updates before launch</label>
+      <button class="btn btn-primary" type="submit">Join the waitlist</button>
+      <p class="form-status" role="status" hidden></p>
+      <p class="small muted">We use these details only to contact you about Fintoras. See the <a href="privacy.html">privacy notice</a>.</p>
+    </form>
+  </div>
+</dialog>
+
+<script src="site.js" defer></script>
 </body>
 </html>

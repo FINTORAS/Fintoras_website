@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Contact | FINTORAS</title>
-<meta name="description" content="Get in touch with Fintoras: questions, demo requests and partnerships.">
+<title>Project profit calculator | FINTORAS</title>
+<meta name="description" content="A free calculator for project margin: enter the fee, hours and costs to see projected profit and the hours left before break-even.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FINTORAS">
-<meta property="og:title" content="Contact | FINTORAS">
-<meta property="og:description" content="Get in touch with Fintoras: questions, demo requests and partnerships.">
+<meta property="og:title" content="Project profit calculator | FINTORAS">
+<meta property="og:description" content="A free calculator for project margin: enter the fee, hours and costs to see projected profit and the hours left before break-even.">
 <meta name="theme-color" content="#0b1326">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/oxanium.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,7 +21,7 @@
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="FINTORAS home"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><clipPath id="brand-clip"><circle cx="11" cy="11" r="10"/></clipPath></defs><g clip-path="url(#brand-clip)"><path d="M0 0h22v9L0 14z" fill="var(--sky)"/><path d="M0 14l22-5v13H0z" fill="var(--earth)"/><path d="M0 14l22-5" stroke="var(--night)" stroke-width="1.5"/></g><circle cx="11" cy="11" r="10" fill="none" stroke="var(--ink)" stroke-width="1.5"/></svg><span>FINTORAS</span></a>
-    <nav class="nav" id="site-nav" aria-label="Main"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="calculator.html">Calculator</a><a href="fintorasblogs.html">Blog</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="contact.html" data-open="waitlist">Join the waitlist</a></nav>
+    <nav class="nav" id="site-nav" aria-label="Main"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="calculator.html" aria-current="page">Calculator</a><a href="fintorasblogs.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html" data-open="waitlist">Join the waitlist</a></nav>
     <div class="head-tools">
       <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch between dark and light"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
       <a class="btn btn-primary btn-small" href="contact.html" data-open="waitlist">Join the waitlist</a>
@@ -33,55 +33,50 @@
 <main id="main">
   <section class="page-head">
     <div class="wrap">
-      <h1>Talk to us</h1>
-      <p class="lede">Questions, demo requests and partnership ideas are all welcome. We usually reply within one working day.</p>
+      <h1>Project profit calculator</h1>
+      <p class="lede">Find out whether a job is on course to make money, and how many hours are left before it stops. Nothing you type leaves your browser.</p>
       
     </div>
   </section>
-  <section class="band" aria-label="Contact">
-    <div class="wrap split" style="grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)">
-      <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-            data-ok="Message sent. We'll reply to {email}.">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hp"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <h2 class="h-sub">Send a message</h2>
-        <div class="form-2">
-          <div class="field"><label for="c-first">First name</label><input type="text" id="c-first" name="firstName" autocomplete="given-name" required></div>
-          <div class="field"><label for="c-last">Last name</label><input type="text" id="c-last" name="lastName" autocomplete="family-name" required></div>
-          <div class="field"><label for="c-email">Email</label><input type="email" id="c-email" name="email" autocomplete="email" required></div>
-          <div class="field"><label for="c-company">Company <span class="muted">(optional)</span></label><input type="text" id="c-company" name="company" autocomplete="organization"></div>
+  <section class="band" aria-label="Calculator">
+    <div class="wrap stack-lg">
+      <form class="calc" data-calc="full" aria-label="Project profit calculator">
+        <div class="calc-in">
+          <div class="field"><label for="fc-fee">Project fee</label><div class="affix pre"><span>$</span><input type="number" id="fc-fee" name="fee" value="48000" min="0" step="500" inputmode="decimal"></div><span class="hint">What the client pays for the whole job.</span></div>
+          <div class="field"><label for="fc-rate">Cost per hour</label><div class="affix pre"><span>$</span><input type="number" id="fc-rate" name="rate" value="70" min="0" step="1" inputmode="decimal"></div><span class="hint">What an hour of your team costs you, not what you charge.</span></div>
+          <div class="field"><label for="fc-planned">Planned hours</label><div class="affix post"><input type="number" id="fc-planned" name="planned" value="400" min="0" step="1" inputmode="decimal"><span>h</span></div></div>
+          <div class="field"><label for="fc-logged">Hours logged so far</label><div class="affix post"><input type="number" id="fc-logged" name="logged" value="260" min="0" step="1" inputmode="decimal"><span>h</span></div></div>
+          <div class="field"><label for="fc-complete">Work completed</label><div class="affix post"><input type="number" id="fc-complete" name="complete" value="50" min="1" max="100" step="1" inputmode="decimal"><span>%</span></div><span class="hint">Your honest estimate.</span></div>
+          <div class="field"><label for="fc-other">Other costs</label><div class="affix pre"><span>$</span><input type="number" id="fc-other" name="other" value="4000" min="0" step="100" inputmode="decimal"></div><span class="hint">Contractors, software, travel.</span></div>
         </div>
-        <div class="field"><label for="c-subject">What is this about?</label>
-          <select id="c-subject" name="subject" required>
-            <option value="">Choose one</option>
-            <option value="Demo">Request a demo</option>
-            <option value="Question">General question</option>
-            <option value="Partnership">Partnership</option>
-            <option value="Careers">Working at Fintoras</option>
-            <option value="Other">Something else</option>
-          </select>
+        <div class="calc-out" aria-live="polite">
+          <div class="stack">
+            <span class="muted">Projected margin</span>
+            <span class="big up" data-out="margin">+15.8%</span>
+          </div>
+          <div class="meter" aria-hidden="true"><i class="m-up"></i><i class="m-down"></i></div>
+          <dl>
+            <dt>Planned margin</dt><dd data-out="plannedMargin">+33.3%</dd>
+            <dt>Projected profit</dt><dd data-out="profit">+$7,600</dd>
+            <dt>Cost so far</dt><dd data-out="costToDate">$22,200</dd>
+            <dt>Projected hours</dt><dd data-out="projectedHours">520 h</dd>
+            <dt>Projected total cost</dt><dd data-out="cost">$40,400</dd>
+            <dt>Break-even at</dt><dd data-out="breakeven">628 h</dd>
+          </dl>
+          <p class="verdict" data-out="verdict">Healthy. You have 368 hours of room before break-even.</p>
         </div>
-        <div class="field"><label for="c-message">Message</label><textarea id="c-message" name="message" required></textarea></div>
-        <label class="check" for="c-privacy"><input type="checkbox" id="c-privacy" name="privacy" value="agreed" required> <span>I agree to the <a href="privacy.html">privacy notice</a>.</span></label>
-        <div><button class="btn btn-primary" type="submit">Send message</button></div>
-        <p class="form-status" role="status" hidden></p>
       </form>
-      <div class="stack">
-        <h2 class="h-sub">Or write directly</h2>
-        <ul class="contact-list">
-          <li><span>General</span><a href="mailto:hello@fintoras.com">hello@fintoras.com</a></li>
-          <li><span>Sales</span><a href="mailto:sales@fintoras.com">sales@fintoras.com</a></li>
-          <li><span>Support</span><a href="mailto:support@fintoras.com">support@fintoras.com</a></li>
-          <li><span>Where we are</span><b>Remote, based in the United States</b></li>
-        </ul>
-      </div>
+      <p class="small muted measure">This is an estimate from the numbers you enter. It assumes the rest of the job goes at the same pace as the work so far.</p>
     </div>
   </section>
 
-  <section class="band band-panel" aria-labelledby="cfaq-title">
+  <section class="band band-panel" aria-labelledby="how-title">
     <div class="wrap split">
-      <h2 id="cfaq-title">Common questions</h2>
-      <div class="faq"><details><summary>How do I get early access?</summary><p>Join the waitlist and we'll email you when early access opens.</p></details><details><summary>Can I see a demo?</summary><p>While the product is in development we are showing it to a small number of teams. Choose Request a demo in the form and tell us a little about yours.</p></details><details><summary>Will I be able to import my existing projects?</summary><p>Import from CSV is planned for launch. Tell us which tool you use today and we'll take it into account.</p></details><details><summary>How will my financial data be protected?</summary><p>We'll publish how data is stored, encrypted and backed up, and which independent audits we have completed, before the first customer account opens.</p></details><details><summary>Will there be an API?</summary><p>Yes. API access is planned for the Professional and Enterprise plans.</p></details><details><summary>What will it cost?</summary><p>The planned prices are on the <a href="pricing.html">pricing page</a>, along with answers about trials, billing and cancelling.</p></details></div>
+      <div class="stack">
+        <h2 id="how-title">How the numbers are worked out</h2>
+        <p class="muted">Fintoras is being built to run this sum for every project, every day, from the hours and costs your team already records.</p>
+      </div>
+      <ul class="rows"><li><h3>Projected hours</h3><p>Hours logged so far, divided by the share of the work that is done. 260 hours at 50% complete projects to 520.</p></li><li><h3>Projected cost</h3><p>Projected hours times your cost per hour, plus other costs.</p></li><li><h3>Margin</h3><p>Fee minus projected cost, as a share of the fee.</p></li><li><h3>Break-even</h3><p>Fee minus other costs, divided by cost per hour. Past this many hours, the project loses money.</p></li></ul>
     </div>
   </section>
 
@@ -93,7 +88,7 @@
       </div>
       <div class="btn-row">
         <a class="btn btn-primary" href="contact.html" data-open="waitlist">Join the waitlist</a>
-        <a class="btn btn-quiet" href="calculator.html">Try the calculator</a>
+        <a class="btn btn-quiet" href="features.html">See the features</a>
       </div>
     </div>
   </section>

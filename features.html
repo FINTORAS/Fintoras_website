@@ -1,414 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - FINTORAS</title>
-    <meta name="description" content="Explore FINTORAS features: project management, financial tracking, AI insights, time tracking, intelligent reporting, and integrations.">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Features | FINTORAS</title>
+<meta name="description" content="Project management, time tracking, budgets, per-project margin, AI checks, reporting and integrations: what Fintoras is building for launch.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FINTORAS">
+<meta property="og:title" content="Features | FINTORAS">
+<meta property="og:description" content="Project management, time tracking, budgets, per-project margin, AI checks, reporting and integrations: what Fintoras is building for launch.">
+<meta name="theme-color" content="#0b1326">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/oxanium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>try{var t=localStorage.getItem("fintoras-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body>
-    <!-- HEADER & NAVIGATION -->
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">FIN<span class="logo-accent">TORAS</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html" class="active">Features</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="fintorasblogs.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><button class="cta-button" onclick="openModal()">Join Waitlist</button></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-container">
-            <h1>Powerful Features Built for <span class="accent">Project Success</span></h1>
-            <p>Everything you need to manage projects, track finances, and make data-driven decisions in one unified platform.</p>
-        </div>
-    </section>
-
-    <!-- FEATURE 1: PROJECT MANAGEMENT -->
-    <section class="section section-light">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
-                <div>
-                    <div style="font-size: 50px; margin-bottom: 1rem;">📊</div>
-                    <h2>Project Management</h2>
-                    <p>Organize all your work in one place with intuitive project management tools.</p>
-                    <ul style="margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📋 Task Management:</strong> Create projects, break them into tasks, and assign to team members</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📈 Multiple Views:</strong> Kanban boards, Gantt charts, timeline view, and list view</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>🏷️ Custom Fields:</strong> Add priority, status, custom tags, and properties</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>👥 Team Collaboration:</strong> Comments, file attachments, @mentions, activity feed</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📅 Deadline Management:</strong> Set deadlines, get alerts, track milestones</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>♻️ Workflow Automation:</strong> Auto-update tasks based on triggers and rules</li>
-                    </ul>
-                </div>
-                <div style="background: #f0f9fc; border-radius: 12px; padding: 2rem; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <div>
-                        <p style="color: #64748b; margin-bottom: 1rem;">Feature Preview</p>
-                        <p style="font-size: 60px;">📊</p>
-                        <p style="color: #1e293b; font-weight: 600;">Kanban & Gantt Views</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURE 2: FINANCIAL TRACKING -->
-    <section class="section section-dark">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
-                <div style="background: white; border-radius: 12px; padding: 2rem; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center; order: 2;">
-                    <div>
-                        <p style="color: #64748b; margin-bottom: 1rem;">Feature Preview</p>
-                        <p style="font-size: 60px;">💰</p>
-                        <p style="color: #1e293b; font-weight: 600;">Real-time Profit Tracking</p>
-                    </div>
-                </div>
-                <div style="order: 1;">
-                    <div style="font-size: 50px; margin-bottom: 1rem;">💰</div>
-                    <h2>Financial Tracking</h2>
-                    <p>Track every penny spent on your projects and see true profitability in real-time.</p>
-                    <ul style="margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💵 Budget Creation:</strong> Set project budgets by task, team member, or expense category</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📝 Expense Logging:</strong> Record time costs, materials, subcontractors, and overhead</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📊 Budget vs. Actual:</strong> Real-time comparison showing variance and burn rate</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💹 Profit Margins:</strong> Automatic calculation of profit margins per project</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>🎯 Cost Allocation:</strong> Allocate shared costs across projects intelligently</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💱 Multi-currency:</strong> Support for multiple currencies and automatic conversion</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURE 3: AI-POWERED INSIGHTS -->
-    <section class="section section-light">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
-                <div>
-                    <div style="font-size: 50px; margin-bottom: 1rem;">🤖</div>
-                    <h2>AI-Powered Insights</h2>
-                    <p>Leverage artificial intelligence to uncover opportunities and prevent problems before they happen.</p>
-                    <ul style="margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>⚠️ Anomaly Detection:</strong> AI flags unusual spending, timeline slips, or scope changes</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📈 Profit Forecasting:</strong> ML-powered predictions of final project profitability</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>🎯 Smart Recommendations:</strong> AI suggests optimizations (reduce scope, adjust pricing, reallocate resources)</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>🚨 Budget Alerts:</strong> Proactive notifications when projects are going off track</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📊 Trend Analysis:</strong> Historical patterns to improve estimates and pricing</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💡 Insights Bot:</strong> Ask questions in natural language, get instant analysis</li>
-                    </ul>
-                </div>
-                <div style="background: linear-gradient(135deg, #f0f9fc 0%, #e0f8f5 100%); border-radius: 12px; padding: 2rem; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <div>
-                        <p style="color: #64748b; margin-bottom: 1rem;">Feature Preview</p>
-                        <p style="font-size: 60px;">🤖</p>
-                        <p style="color: #1e293b; font-weight: 600;">AI Recommendations</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURE 4: TIME TRACKING -->
-    <section class="section section-dark">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
-                <div style="background: white; border-radius: 12px; padding: 2rem; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center; order: 2;">
-                    <div>
-                        <p style="color: #64748b; margin-bottom: 1rem;">Feature Preview</p>
-                        <p style="font-size: 60px;">⏱️</p>
-                        <p style="color: #1e293b; font-weight: 600;">Integrated Time Tracking</p>
-                    </div>
-                </div>
-                <div style="order: 1;">
-                    <div style="font-size: 50px; margin-bottom: 1rem;">⏱️</div>
-                    <h2>Time Tracking</h2>
-                    <p>Know the true cost of every project with integrated time tracking tied directly to tasks.</p>
-                    <ul style="margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>⏱️ Time Entries:</strong> Log hours directly on tasks with descriptions and breaks</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>⏱️ Timer:</strong> Start/stop timer for real-time tracking during work</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💼 Team Capacity:</strong> See how time is allocated across projects and team members</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>⚠️ Overtime Alerts:</strong> Get notified when tasks exceed estimated hours</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📊 Utilization Reports:</strong> Dashboard showing team member utilization and billable hours</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💰 Rate Management:</strong> Set hourly rates per person and project type</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURE 5: REPORTING & DASHBOARDS -->
-    <section class="section section-light">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
-                <div>
-                    <div style="font-size: 50px; margin-bottom: 1rem;">📈</div>
-                    <h2>Intelligent Reporting</h2>
-                    <p>Get comprehensive insights with pre-built reports and customizable dashboards.</p>
-                    <ul style="margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📊 Profitability Report:</strong> Detailed breakdown of revenue, costs, and margins per project</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>👥 Team Utilization:</strong> See how efficiently team members are allocated</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💹 Financial Summary:</strong> Monthly P&L, cash flow, and trend analysis</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>🎯 Custom Dashboards:</strong> Build your own views with drag-and-drop widgets</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📧 Scheduled Reports:</strong> Auto-email reports on daily, weekly, or monthly basis</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📥 Export & Share:</strong> Download as PDF, Excel, or share via link</li>
-                    </ul>
-                </div>
-                <div style="background: #f0f9fc; border-radius: 12px; padding: 2rem; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center;">
-                    <div>
-                        <p style="color: #64748b; margin-bottom: 1rem;">Feature Preview</p>
-                        <p style="font-size: 60px;">📈</p>
-                        <p style="color: #1e293b; font-weight: 600;">Custom Dashboards</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURE 6: INTEGRATIONS -->
-    <section class="section section-dark">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;">
-                <div style="background: white; border-radius: 12px; padding: 2rem; text-align: center; min-height: 400px; display: flex; align-items: center; justify-content: center; order: 2;">
-                    <div>
-                        <p style="color: #64748b; margin-bottom: 1rem;">Feature Preview</p>
-                        <p style="font-size: 60px;">🔗</p>
-                        <p style="color: #1e293b; font-weight: 600;">Third-party Integrations</p>
-                    </div>
-                </div>
-                <div style="order: 1;">
-                    <div style="font-size: 50px; margin-bottom: 1rem;">🔗</div>
-                    <h2>Integrations & Connections</h2>
-                    <p>Connect FINTORAS with the tools your team already uses for seamless workflows.</p>
-                    <ul style="margin-top: 1.5rem;">
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💬 Slack:</strong> Get alerts, manage tasks, and view reports directly in Slack</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📊 QuickBooks:</strong> Sync financial data and maintain accounting accuracy</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>💳 Stripe:</strong> Automatic invoice creation and payment tracking</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>🤖 Zapier:</strong> Connect to 5,000+ apps (Google Sheets, Airtable, etc.)</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>📧 Google Workspace:</strong> Calendar integration and Gmail notifications</li>
-                        <li style="margin-bottom: 1rem; color: #475569;"><strong>🔌 REST API:</strong> Build custom integrations with full API access</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPARISON TABLE -->
-    <section class="section section-light">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h2>How FINTORAS Compares</h2>
-                <p class="text-muted">The only all-in-one solution combining project management with financial tracking</p>
-            </div>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>FINTORAS</th>
-                        <th>Monday.com</th>
-                        <th>Asana</th>
-                        <th>Harvest</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="feature-name">Project Management</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Financial Tracking</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">AI Insights</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Time Tracking</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Budget vs. Actual</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Profit Margins</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                        <td class="cross">✗</td>
-                        <td class="check">✓</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Kanban/Gantt</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Custom Dashboards</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="check">✓</td>
-                        <td class="cross">✗</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section section-dark">
-        <div class="container">
-            <div style="text-align: center;">
-                <h2>Ready to Try FINTORAS?</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 1rem auto; font-size: 1.1rem;">Join the waitlist and be first to access the platform that changes how small teams manage projects and finances.</p>
-                <button class="cta-button" onclick="openModal()" style="margin-top: 2rem;">Join the Waitlist</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Product</h3>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="team.html">Team</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="about.html">Our Story</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 FINTORAS. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WAITLIST MODAL -->
-    <div id="waitlistModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Join the Waitlist</h2>
-            <p>Be first to access FINTORAS and transform how your team manages projects and finances.</p>
-            
-            <form id="waitlistForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                
-                <div class="form-group">
-                    <label for="teamSize">Team Size *</label>
-                    <select id="teamSize" name="teamSize" required>
-                        <option value="">Select team size</option>
-                        <option value="1-5">1-5 people</option>
-                        <option value="6-10">6-10 people</option>
-                        <option value="11-20">11-20 people</option>
-                        <option value="21-50">21-50 people</option>
-                        <option value="50+">50+ people</option>
-                    </select>
-                </div>
-                
-                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                    <input type="checkbox" id="updates" name="updates" checked>
-                    <label for="updates" style="margin: 0; font-weight: 400; color: #64748b; font-size: 0.9rem;">Send me updates and launch notifications</label>
-                </div>
-                
-                <button type="submit" class="submit-btn">Get Notified</button>
-            </form>
-            
-            <p style="text-align: center; color: #94a3b8; font-size: 0.85rem; margin-top: 1rem;">We respect your privacy. No spam, ever.</p>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="FINTORAS home"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><clipPath id="brand-clip"><circle cx="11" cy="11" r="10"/></clipPath></defs><g clip-path="url(#brand-clip)"><path d="M0 0h22v9L0 14z" fill="var(--sky)"/><path d="M0 14l22-5v13H0z" fill="var(--earth)"/><path d="M0 14l22-5" stroke="var(--night)" stroke-width="1.5"/></g><circle cx="11" cy="11" r="10" fill="none" stroke="var(--ink)" stroke-width="1.5"/></svg><span>FINTORAS</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main"><a href="features.html" aria-current="page">Features</a><a href="pricing.html">Pricing</a><a href="calculator.html">Calculator</a><a href="fintorasblogs.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html" data-open="waitlist">Join the waitlist</a></nav>
+    <div class="head-tools">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch between dark and light"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <a class="btn btn-primary btn-small" href="contact.html" data-open="waitlist">Join the waitlist</a>
+      <button class="icon-btn menu-btn" type="button" data-menu aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
+  </div>
+</header>
 
-    <script>
-        function openModal() {
-            document.getElementById("waitlistModal").style.display = "block";
-        }
-        
-        function closeModal() {
-            document.getElementById("waitlistModal").style.display = "none";
-        }
-        
-        window.onclick = function(event) {
-            var modal = document.getElementById("waitlistModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        
-        document.getElementById("waitlistForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            
-            alert("Thank you for joining! We'll be in touch soon at " + email);
-            document.getElementById("waitlistForm").reset();
-            closeModal();
-        });
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <h1>Everything between the task and the margin</h1>
+      <p class="lede">Six parts that share one set of numbers. Fintoras is still in development, so this page describes what we are building for launch.</p>
+      
+    </div>
+  </section>
+  <div class="band">
+    <div class="wrap">
+      <section class="feature" aria-labelledby="f0">
+        <div class="stack">
+          <h2 id="f0">Project management</h2>
+          <p class="muted">Organise the work in one place, in the view each person prefers.</p>
+          <div>
+      <div class="pic" aria-hidden="true">
+        <div class="board">
+          <div><b>To do</b><div class="card">Checkout flow<small>16 h est.</small></div><div class="card">Push notifications<small>10 h est.</small></div></div>
+          <div><b>Doing</b><div class="card">Account screens<small>14 of 12 h</small></div><div class="card">API hookup<small>6 of 20 h</small></div></div>
+          <div><b>Done</b><div class="card">Wireframes<small>18 of 20 h</small></div></div>
+        </div>
+      </div>
+      <p class="pic-cap">Board view with hours against estimate on each card. Sample data.</p></div>
+        </div>
+        <ul class="rows"><li><h3>Tasks</h3><p>Create projects, break them into tasks and assign them to people.</p></li><li><h3>Board, timeline and list</h3><p>Kanban boards, Gantt charts, a timeline view and a plain list.</p></li><li><h3>Custom fields</h3><p>Add priority, status, tags and any other property your team uses.</p></li><li><h3>Collaboration</h3><p>Comments, file attachments, mentions and an activity feed on every task.</p></li><li><h3>Deadlines</h3><p>Set due dates and milestones, and get alerted before they slip.</p></li><li><h3>Automation</h3><p>Update tasks automatically from triggers and rules you define.</p></li></ul>
+      </section>
+      <section class="feature" aria-labelledby="f1">
+        <div class="stack">
+          <h2 id="f1">Financial tracking</h2>
+          <p class="muted">Track what each project costs and see its margin as the work happens.</p>
+          <div>
+      <div class="pic" aria-hidden="true">
+        <div class="bars">
+          <div class="row"><span>Design</span><span class="track"><i class="fill" style="--p:73.6"></i><i class="mark" style="--at:80"></i></span><span class="n">92%</span></div>
+          <div class="row"><span>Build</span><span class="track"><i class="fill over" style="--p:94.4"></i><i class="mark" style="--at:80"></i></span><span class="n">118%</span></div>
+          <div class="row"><span>Testing</span><span class="track"><i class="fill" style="--p:32"></i><i class="mark" style="--at:80"></i></span><span class="n">40%</span></div>
+        </div>
+      </div>
+      <p class="pic-cap">Budget used by phase. The line marks 100% of budget. Sample data.</p></div>
+        </div>
+        <ul class="rows"><li><h3>Budgets</h3><p>Set a budget by task, by team member or by expense category.</p></li><li><h3>Expenses</h3><p>Record time costs, materials, subcontractors and overhead.</p></li><li><h3>Budget against actual</h3><p>A live comparison showing variance and burn rate.</p></li><li><h3>Profit margin</h3><p>Calculated for every project without a spreadsheet.</p></li><li><h3>Shared costs</h3><p>Split costs that belong to several projects across them.</p></li><li><h3>Multiple currencies</h3><p>Work in more than one currency with automatic conversion.</p></li></ul>
+      </section>
+      <section class="feature" aria-labelledby="f2">
+        <div class="stack">
+          <h2 id="f2">AI checks</h2>
+          <p class="muted">Fintoras reads the same numbers you do, every day, and tells you when something moves.</p>
+          <div>
+      <div class="console" aria-hidden="true">
+        <div class="alert"><span class="dot dot-down"></span><strong>Kestrel mobile app is spending ahead of progress</strong>
+          <p>79% of budget used at 50% complete.</p></div>
+        <div class="alert"><span class="dot dot-down"></span><strong>Account screens is over its estimate</strong>
+          <p>14 hours logged against 12 estimated.</p></div>
+        <div class="alert"><span class="dot dot-up"></span><strong>Orchard retainer is ahead of plan</strong>
+          <p>Margin is running above forecast this month.</p></div>
+      </div>
+      <p class="pic-cap">The kind of flag Fintoras raises. Sample data.</p></div>
+        </div>
+        <ul class="rows"><li><h3>Unusual activity</h3><p>Flags spending spikes, timeline slips and scope changes.</p></li><li><h3>Profit forecast</h3><p>Projects each job's final margin from its pace so far.</p></li><li><h3>Suggestions</h3><p>Proposes what to change: trim scope, reprice, or move people.</p></li><li><h3>Budget alerts</h3><p>Tells you when a project starts heading off track, not after.</p></li><li><h3>Trends</h3><p>Uses past projects to improve estimates and pricing on the next one.</p></li><li><h3>Questions in plain language</h3><p>Ask about your projects and get an answer drawn from your own data.</p></li></ul>
+      </section>
+      <section class="feature" aria-labelledby="f3">
+        <div class="stack">
+          <h2 id="f3">Time tracking</h2>
+          <p class="muted">Hours are logged against tasks, so the cost of a project is known without anyone compiling it.</p>
+          <div>
+      <div class="pic" aria-hidden="true">
+        <div class="week"><div><span>6.5</span><i style="--h:6.5"></i>Mon</div><div><span>7</span><i style="--h:7"></i>Tue</div><div><span>8</span><i style="--h:8"></i>Wed</div><div><span>5.5</span><i style="--h:5.5"></i>Thu</div><div><span>7</span><i style="--h:7"></i>Fri</div></div>
+      </div>
+      <p class="pic-cap">Hours logged this week: 34.0. Sample data.</p></div>
+        </div>
+        <ul class="rows"><li><h3>Time entries</h3><p>Log hours on a task with a description.</p></li><li><h3>Timer</h3><p>Start and stop a timer while you work.</p></li><li><h3>Capacity</h3><p>See how time is spread across projects and people.</p></li><li><h3>Over-estimate alerts</h3><p>Get told when a task passes its estimated hours.</p></li><li><h3>Utilisation</h3><p>A view of each person's utilisation and billable hours.</p></li><li><h3>Rates</h3><p>Set cost and billing rates per person and per project type.</p></li></ul>
+      </section>
+      <section class="feature" aria-labelledby="f4">
+        <div class="stack">
+          <h2 id="f4">Reporting</h2>
+          <p class="muted">Ready-made reports for the questions owners ask, and dashboards you can arrange yourself.</p>
+          <div>
+      <div class="table-scroll"><table style="min-width:380px">
+        <caption class="sr-only">Sample profitability report</caption>
+        <thead><tr><th scope="col">Project</th><th scope="col" class="figure">Fee</th><th scope="col" class="figure">Cost</th><th scope="col" class="figure">Margin</th></tr></thead>
+        <tbody><tr><th scope="row">Orchard retainer</th><td class="figure">$18,000</td><td class="figure">$10,440</td><td class="figure up">+42.0%</td></tr><tr><th scope="row">Lumen site redesign</th><td class="figure">$42,000</td><td class="figure">$27,300</td><td class="figure up">+35.0%</td></tr><tr><th scope="row">Atlas data migration</th><td class="figure">$54,000</td><td class="figure">$39,960</td><td class="figure up">+26.0%</td></tr><tr><th scope="row">Tidewater campaign</th><td class="figure">$30,000</td><td class="figure">$28,200</td><td class="figure up">+6.0%</td></tr><tr><th scope="row">Kestrel mobile app</th><td class="figure">$96,000</td><td class="figure">$107,520</td><td class="figure down">−12.0%</td></tr></tbody></table></div>
+      <p class="pic-cap">A profitability report, most profitable first. Sample data.</p></div>
+        </div>
+        <ul class="rows"><li><h3>Profitability</h3><p>Revenue, cost and margin for every project.</p></li><li><h3>Team utilisation</h3><p>How efficiently time is allocated across the team.</p></li><li><h3>Financial summary</h3><p>Monthly profit and loss, cash flow and trends.</p></li><li><h3>Custom dashboards</h3><p>Build your own view from drag-and-drop widgets.</p></li><li><h3>Scheduled reports</h3><p>Reports emailed daily, weekly or monthly.</p></li><li><h3>Export and share</h3><p>Download as PDF or Excel, or share a link.</p></li></ul>
+      </section>
+      <section class="feature" aria-labelledby="f5">
+        <div class="stack">
+          <h2 id="f5">Integrations</h2>
+          <p class="muted">Fintoras is meant to sit beside the tools you already use, not replace all of them.</p>
+          <div>
+      <ul class="taglist"><li>Slack</li><li>QuickBooks</li><li>Stripe</li><li>Zapier</li><li>Google Workspace</li><li>REST API</li></ul>
+      <p class="pic-cap">Connections planned for launch.</p></div>
+        </div>
+        <ul class="rows"><li><h3>Slack</h3><p>Alerts, task updates and reports in the channels you already read.</p></li><li><h3>QuickBooks</h3><p>Sync financial data so your books and your projects agree.</p></li><li><h3>Stripe</h3><p>Create invoices and track payments.</p></li><li><h3>Zapier</h3><p>Connect the apps Fintoras doesn't cover directly.</p></li><li><h3>Google Workspace</h3><p>Calendar sync and Gmail notifications.</p></li><li><h3>REST API</h3><p>Build your own integrations with full API access.</p></li></ul>
+      </section>
+    </div>
+  </div>
 
-        // Set active nav link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
-            }
-        });
-    </script>
+  <section class="band band-panel" aria-labelledby="cmp-title">
+    <div class="wrap stack-lg">
+      <div class="stack">
+        <h2 id="cmp-title">Where Fintoras sits</h2>
+        <p class="lede">Work tools are good at tasks. Time and invoicing tools are good at hours. The margin usually ends up in a spreadsheet between them.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="matrix">
+          <caption class="sr-only">How Fintoras compares with other kinds of tool</caption>
+          <thead><tr>
+            <th scope="col">Capability</th>
+            <th scope="col" class="own">Fintoras<small>planned for launch</small></th>
+            <th scope="col">Work management tools<small>such as Asana and monday.com</small></th>
+            <th scope="col">Time and invoicing tools<small>such as Harvest</small></th>
+            <th scope="col">Spreadsheets</th>
+          </tr></thead>
+          <tbody><tr><th scope="row">Tasks, boards and timelines</th><td class="own">Built in</td><td>Built in</td><td>Not available</td><td>No</td></tr><tr><th scope="row">Time tracking</th><td class="own">Built in</td><td>On higher plans</td><td>Built in</td><td>By hand</td></tr><tr><th scope="row">Budget against actual</th><td class="own">Built in</td><td>Add-on or formulas</td><td>Built in</td><td>By hand</td></tr><tr><th scope="row">Profit margin per project</th><td class="own">Built in</td><td>Build it yourself</td><td>On the top plans</td><td>By hand</td></tr><tr><th scope="row">Warns you when margin slips</th><td class="own">Built in</td><td>Not for margin</td><td>Budget alerts only</td><td>No</td></tr><tr><th scope="row">Work and money in one place</th><td class="own">Yes</td><td>Partly</td><td>Partly</td><td>No</td></tr></tbody>
+        </table>
+      </div>
+      <p class="small muted measure">Based on each vendor's public feature and pricing pages, checked in October 2026. Their plans change, so confirm with the vendor before you rely on this. Product names belong to their owners.</p>
+    </div>
+  </section>
+
+  <section class="closing band" aria-labelledby="closing-title">
+    <div class="wrap">
+      <div class="stack">
+        <h2 id="closing-title">Get early access when it opens</h2>
+        <p class="lede">Fintoras is in development. The waitlist hears first.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="contact.html" data-open="waitlist">Join the waitlist</a>
+        <a class="btn btn-quiet" href="calculator.html">Try the calculator</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="stack">
+        <a class="brand" href="index.html" aria-label="FINTORAS home"><span>FINTORAS</span></a>
+        <p class="measure">Project management and project finances in one place, for small teams who need to know which work pays.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="calculator.html">Profit calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="fintorasblogs.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://github.com/FINTORAS" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 FINTORAS. Founded by Sunil Uthukota.</span>
+      <span>In development. The waitlist is open.</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="sheet" id="waitlist" aria-labelledby="waitlist-title">
+  <div class="sheet-body">
+    <div class="sheet-top">
+      <div class="stack">
+        <h2 id="waitlist-title">Join the waitlist</h2>
+        <p class="muted">We'll email you when early access opens. Nothing else, unless you ask for updates.</p>
+      </div>
+      <button class="icon-btn" type="button" data-close aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <form class="form" name="waitlist" method="POST" action="index.html" data-netlify="true" netlify-honeypot="bot-field"
+          data-ok="You're on the waitlist. We'll email {email} when early access opens.">
+      <input type="hidden" name="form-name" value="waitlist">
+      <p class="hp"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="form-2">
+        <div class="field"><label for="wl-name">Full name</label><input type="text" id="wl-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="wl-email">Work email</label><input type="email" id="wl-email" name="email" autocomplete="email" required></div>
+        <div class="field"><label for="wl-company">Company <span class="muted">(optional)</span></label><input type="text" id="wl-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="wl-size">Team size</label>
+          <select id="wl-size" name="teamSize" required>
+            <option value="">Choose one</option>
+            <option value="1-5">1 to 5 people</option>
+            <option value="6-10">6 to 10 people</option>
+            <option value="11-20">11 to 20 people</option>
+            <option value="21-50">21 to 50 people</option>
+            <option value="50+">More than 50</option>
+          </select>
+        </div>
+      </div>
+      <label class="check" for="wl-updates"><input type="checkbox" id="wl-updates" name="updates" value="yes"> Also send me product updates before launch</label>
+      <button class="btn btn-primary" type="submit">Join the waitlist</button>
+      <p class="form-status" role="status" hidden></p>
+      <p class="small muted">We use these details only to contact you about Fintoras. See the <a href="privacy.html">privacy notice</a>.</p>
+    </form>
+  </div>
+</dialog>
+
+<script src="site.js" defer></script>
 </body>
 </html>

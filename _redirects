@@ -1,0 +1,3 @@
+# The blog lives at fintorasblogs.html; older links pointed at blog.html
+/blog.html  /fintorasblogs.html  301
+/blog       /fintorasblogs.html  301
