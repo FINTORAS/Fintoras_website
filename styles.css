@@ -263,7 +263,7 @@ ul, ol { margin: 0; padding: 0; }
   border: 1px solid var(--line); color: var(--muted); white-space: nowrap;
 }
 .chip-warn { border-color: var(--earth); color: var(--earth); }
-.chip-status { font-size: 0.8125rem; padding: 0.4rem 0.75rem; color: var(--ink); }
+.chip-status { font-size: 0.8125rem; line-height: 1.3; padding: 0.4rem 0.75rem; color: var(--ink); white-space: normal; max-width: 100%; }
 .horizon-tag {
   position: absolute; left: 0; top: 0.45rem;
   font: 500 0.75rem/1 var(--display); color: var(--faint);
@@ -337,6 +337,18 @@ tr.result td { font-size: var(--step-1); font-weight: 500; }
 td.own, th.own { background: var(--sky-wash); color: var(--ink); }
 .yes { color: var(--ink); }
 .matrix { min-width: 640px; }
+/* Reporting sample table on Features: shrink to fit narrow boxes instead of scrolling sideways */
+.report-scroll { container-type: inline-size; }
+@container (max-width: 440px) {
+  .report th, .report td { padding: 0.7rem 0.5rem; font-size: 0.875rem; }
+  .report tr > :first-child { padding-left: 0.8rem; }
+  .report tr > :last-child { padding-right: 0.8rem; }
+  .report td.figure, .report th.figure { padding-left: 0.25rem; }
+}
+@container (max-width: 300px) {
+  .report th, .report td { padding-inline: 0.4rem; font-size: 0.8125rem; }
+  .report td.figure, .report th.figure { padding-left: 0.2rem; }
+}
 @media (max-width: 520px) {
   .ledger th, .ledger td { padding: 0.7rem 0.6rem; font-size: 0.9375rem; }
   .ledger tr.result td { font-size: 1.0625rem; }
@@ -500,7 +512,7 @@ dialog.sheet::backdrop { background: var(--scrim); }
 .board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
 .board > div { display: flex; flex-direction: column; gap: 0.45rem; }
 .board b { font-weight: 600; color: var(--ink); font-size: 0.8125rem; }
-.card { border: 1px solid var(--line); background: var(--night); border-radius: 4px; padding: 0.5rem 0.55rem; line-height: 1.35; color: var(--ink); }
+.card { border: 1px solid var(--line); background: var(--night); border-radius: 4px; padding: 0.5rem 0.55rem; line-height: 1.35; color: var(--ink); overflow-wrap: anywhere; }
 .card small { display: block; color: var(--faint); font-family: var(--display); font-variant-numeric: tabular-nums; margin-top: 0.2rem; }
 .bars { display: flex; flex-direction: column; gap: 0.85rem; }
 .bars .row { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr) 4.2rem; gap: 0.6rem; align-items: center; }
@@ -509,15 +521,15 @@ dialog.sheet::backdrop { background: var(--scrim); }
 .bars .fill.over { background: var(--earth); }
 .bars .mark { position: absolute; top: -2px; bottom: -2px; left: calc(var(--at) * 1%); border-left: 2px solid var(--ink); }
 .bars .n { text-align: right; font-family: var(--display); font-variant-numeric: tabular-nums; color: var(--ink); }
-.week { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.5rem; align-items: end; height: 7.5rem; }
+.week { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.5rem; align-items: end; min-height: 7.5rem; }
 .week div { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 0.3rem; height: 100%; }
 .week i { display: block; width: 100%; height: calc(var(--h) * 11px); background: var(--sky); border-radius: 2px 2px 0 0; }
 .week span { font-family: var(--display); font-variant-numeric: tabular-nums; color: var(--ink); }
 .feature { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(1.75rem, 5vw, 4.5rem); align-items: start; padding-block: clamp(2.5rem, 1.5rem + 4vw, 4.5rem); border-top: 1px solid var(--line-soft); }
 .feature:first-child { border-top: 0; padding-top: 0; }
 .feature > * { min-width: 0; }
-.feature .stack { position: sticky; top: 92px; }
-@media (max-width: 860px) { .feature { grid-template-columns: minmax(0, 1fr); } .feature .stack { position: static; } }
+.feature > .stack { position: sticky; top: 92px; }
+@media (max-width: 860px) { .feature { grid-template-columns: minmax(0, 1fr); } .feature > .stack { position: static; } }
 .taglist { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .taglist li { border: 1px solid var(--line); border-radius: 99px; padding: 0.35rem 0.8rem; font-size: 0.9375rem; color: var(--ink); }
 
