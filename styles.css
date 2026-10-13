@@ -605,3 +605,15 @@ dialog.sheet::backdrop { background: var(--scrim); }
 @media (max-width: 640px) { .plan-strip { grid-template-columns: minmax(0, 1fr); border-top: 0; } .plan-strip > div { border-top: 1px solid var(--line-soft); padding: 1.1rem 0; } }
 .lost { min-height: 50vh; display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; }
 .lost .big { font: 500 clamp(4rem, 2rem + 12vw, 9rem)/0.9 var(--display); color: var(--earth); font-variant-numeric: tabular-nums; }
+
+/* ---------- photos ----------
+   Royalty-free photos from Unsplash (free under the Unsplash License, commercial use allowed).
+   A faint night-blue wash and a sky-coloured base line keep them in the instrument-panel look. */
+.photo { position: relative; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); aspect-ratio: 4 / 3; }
+.photo-wide { aspect-ratio: 5 / 2; }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--night) 45%, transparent) 100%);
+  box-shadow: inset 0 -2px 0 var(--sky); }
+.page-head .photo { margin-top: 0.75rem; }
+@media (max-width: 640px) { .photo-wide { aspect-ratio: 16 / 9; } }
