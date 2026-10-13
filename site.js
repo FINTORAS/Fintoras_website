@@ -25,10 +25,23 @@
     });
   }
 
+  /* ---------- Fintoras API (waitlist copy) ---------- */
+  // Free hosting sleeps when idle, so wake the API as soon as someone shows interest.
+  var API = "https://fintoras-api.onrender.com";
+  var woken = false;
+  function wakeApi() {
+    if (woken || PREVIEW) return;
+    woken = true;
+    try { fetch(API + "/health", { mode: "no-cors", cache: "no-store" }).catch(function () {}); } catch (e) { /* ignore */ }
+  }
+
   /* ---------- waitlist dialog ---------- */
   var sheet = document.getElementById("waitlist");
   document.querySelectorAll("[data-open='waitlist']").forEach(function (btn) {
+    btn.addEventListener("pointerenter", wakeApi);
+    btn.addEventListener("focus", wakeApi);
     btn.addEventListener("click", function (e) {
+      wakeApi();
       if (!sheet || typeof sheet.showModal !== "function") return; // falls through to the link's href
       e.preventDefault();
       sheet.showModal();
@@ -54,13 +67,29 @@
       btn.disabled = true;
       btn.textContent = "Sending…";
 
+      var body = new URLSearchParams(new FormData(form)).toString();
+      function check(res) { if (!res.ok) throw new Error("HTTP " + res.status); }
+
+      // Waitlist sign-ups also go to the Fintoras API. Netlify keeps its own copy as a backup,
+      // and the visitor sees success if either one accepts it.
+      var api = null;
+      if (!PREVIEW && form.getAttribute("name") === "waitlist") {
+        api = fetch(API + "/api/v1/waitlist", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body + "&page=" + encodeURIComponent(location.pathname),
+          keepalive: true
+        }).then(check);
+        api.catch(function () { /* Netlify still has it */ });
+      }
+
       var send = PREVIEW
         ? Promise.resolve()
         : fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(new FormData(form)).toString()
-          }).then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); });
+            body: body
+          }).then(check).catch(function (err) { if (api) return api; throw err; });
 
       send.then(function () {
         form.reset();
