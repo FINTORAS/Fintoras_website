@@ -95,7 +95,12 @@
       send.then(function () {
         form.reset();
         status.className = "form-status ok";
-        status.textContent = (form.getAttribute("data-ok") || "Sent.").replace("{email}", email) +
+        // Messages live here, not in data-ok: Netlify's form rewrite mangles apostrophes in attributes.
+        var okText = {
+          waitlist: "You're on the waitlist. We'll email {email} when early access opens.",
+          contact: "Message sent. We'll reply to {email}."
+        }[form.getAttribute("name")] || "Sent.";
+        status.textContent = okText.replace("{email}", email) +
           (PREVIEW ? " (Preview only: nothing was sent.)" : "");
       }).catch(function () {
         status.className = "form-status err";
