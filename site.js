@@ -56,7 +56,8 @@
   }
 
   /* ---------- forms (Netlify Forms) ---------- */
-  document.querySelectorAll("form[data-netlify]").forEach(function (form) {
+  // Select by name, not by data-netlify: Netlify strips that attribute when it publishes the page.
+  document.querySelectorAll("form[name='waitlist'], form[name='contact']").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var status = form.querySelector(".form-status");
