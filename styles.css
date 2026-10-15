@@ -183,9 +183,6 @@ ul, ol { margin: 0; padding: 0; }
 .nav a:hover { color: var(--ink); }
 .nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); border-radius: 0; }
 .head-tools { display: flex; align-items: center; gap: 0.5rem; }
-.head-link { color: var(--muted); font-weight: 500; text-decoration: none; padding: 0.4rem 0.6rem; border-radius: var(--radius); white-space: nowrap; }
-.head-link:hover { color: var(--ink); }
-.nav .nav-signin { display: none; }
 .icon-btn {
   display: inline-grid; place-items: center; width: 40px; height: 40px;
   background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: var(--radius);
@@ -590,7 +587,6 @@ dialog.sheet::backdrop { background: var(--scrim); }
 /* ---------- additions ---------- */
 .nav .nav-cta { display: none; }
 @media (max-width: 940px) { .nav .nav-cta { display: block; color: var(--ink); font-weight: 600; border-bottom: 0; } }
-@media (max-width: 940px) { .head-tools .head-link { display: none; } .nav .nav-signin { display: block; } }
 .h-sub { font-size: var(--step-2); }
 .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; border-top: 1px solid var(--line-soft); padding-top: 1.5rem; }
 .facts dt { font: 500 var(--step-1)/1.2 var(--display); }
