@@ -240,6 +240,161 @@
     suggest();
   }
 
+  /* ---------- Toras Assistant (website chat) ---------- */
+  // Answers questions from the text on this website, through the Fintoras API.
+  (function () {
+    var KEY = "fintoras-assistant";
+    var MAX_KEEP = 10;
+    var GREETING = "Hi, I'm Toras Assistant. Ask me anything about Fintoras: what it does, pricing, the launch, the founder or how to get in touch.";
+    var SUGGESTIONS = ["What does Fintoras do?", "How much does it cost?", "When does it launch?", "Who is behind Fintoras?"];
+    var ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 11.5l3-2.5 2.5 2 3-3"/></svg>';
+    var X = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    var SEND = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+    var history = [];
+    try { history = JSON.parse(sessionStorage.getItem(KEY) || "[]") || []; } catch (e) { history = []; }
+    function save() {
+      history = history.slice(-MAX_KEEP);
+      try { sessionStorage.setItem(KEY, JSON.stringify(history)); } catch (e) { /* conversation just won't follow page changes */ }
+    }
+
+    var launcher = document.createElement("button");
+    launcher.type = "button";
+    launcher.className = "ta-launch";
+    launcher.setAttribute("aria-expanded", "false");
+    launcher.setAttribute("aria-controls", "toras-assistant");
+    launcher.innerHTML = ICON + "<span>Toras Assistant</span>";
+
+    var panel = document.createElement("section");
+    panel.className = "ta-panel";
+    panel.id = "toras-assistant";
+    panel.hidden = true;
+    panel.setAttribute("aria-label", "Toras Assistant");
+    panel.innerHTML =
+      '<div class="ta-head"><div><h2>Toras Assistant</h2><p>Answers from what is on this website</p></div>' +
+      '<button class="icon-btn ta-close" type="button" aria-label="Close Toras Assistant">' + X + '</button></div>' +
+      '<div class="ta-log" role="log" aria-live="polite"></div>' +
+      '<div class="ta-chips"></div>' +
+      '<form class="ta-form"><label class="sr-only" for="ta-input">Your question</label>' +
+      '<input id="ta-input" type="text" maxlength="500" autocomplete="off" placeholder="Ask about Fintoras">' +
+      '<button class="ta-send" type="submit" aria-label="Send">' + SEND + '</button></form>' +
+      '<p class="ta-note">AI answers can be wrong. For anything else, email <a href="mailto:info@fintoras.com">info@fintoras.com</a>.</p>';
+    document.body.appendChild(launcher);
+    document.body.appendChild(panel);
+
+    var log = panel.querySelector(".ta-log");
+    var chips = panel.querySelector(".ta-chips");
+    var form = panel.querySelector(".ta-form");
+    var input = panel.querySelector("#ta-input");
+    var sendBtn = panel.querySelector(".ta-send");
+    var busy = false;
+
+    // Text only (never HTML from the API). Email addresses become links.
+    function bubble(role, text) {
+      var div = document.createElement("div");
+      div.className = "ta-msg " + (role === "user" ? "ta-user" : "ta-bot");
+      String(text).split(/([\w.+-]+@[\w-]+\.[\w.]+)/).forEach(function (part, i) {
+        if (i % 2) {
+          var a = document.createElement("a");
+          a.href = "mailto:" + part;
+          a.textContent = part;
+          div.appendChild(a);
+        } else if (part) {
+          div.appendChild(document.createTextNode(part));
+        }
+      });
+      log.appendChild(div);
+      log.scrollTop = log.scrollHeight;
+      return div;
+    }
+
+    function render() {
+      log.innerHTML = "";
+      bubble("assistant", GREETING);
+      history.forEach(function (t) { bubble(t.role, t.content); });
+      chips.innerHTML = "";
+      chips.hidden = history.length > 0;
+      SUGGESTIONS.forEach(function (q) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "ta-chip";
+        b.textContent = q;
+        b.addEventListener("click", function () { ask(q); });
+        chips.appendChild(b);
+      });
+    }
+
+    function open() {
+      wakeApi();
+      if (!log.childNodes.length) render();
+      panel.hidden = false;
+      launcher.setAttribute("aria-expanded", "true");
+      launcher.classList.add("is-open");
+      input.focus();
+    }
+    function close() {
+      panel.hidden = true;
+      launcher.setAttribute("aria-expanded", "false");
+      launcher.classList.remove("is-open");
+      launcher.focus();
+    }
+
+    function ask(q) {
+      q = q.trim().slice(0, 500);
+      if (!q || busy) return;
+      busy = true;
+      sendBtn.disabled = true;
+      chips.hidden = true;
+      bubble("user", q);
+      input.value = "";
+      var wait = bubble("assistant", "Thinking…");
+      wait.classList.add("ta-wait");
+      var slow = setTimeout(function () {
+        wait.textContent = "Waking up the assistant. The first answer can take up to a minute…";
+      }, 6000);
+      var ctrl = typeof AbortController === "function" ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 75000);
+      var sent = history.slice(-MAX_KEEP);
+
+      function finish(text, ok) {
+        clearTimeout(slow);
+        clearTimeout(timer);
+        wait.remove();
+        bubble("assistant", text);
+        if (ok) {
+          history.push({ role: "user", content: q }, { role: "assistant", content: text });
+          save();
+        }
+        busy = false;
+        sendBtn.disabled = false;
+        input.focus();
+      }
+
+      if (PREVIEW) { finish("This is a preview copy of the site, so Toras Assistant can't answer here.", false); return; }
+      fetch(API + "/api/v1/assistant", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: q, history: sent }),
+        signal: ctrl ? ctrl.signal : undefined
+      }).then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          if (res.ok && data.reply) return finish(data.reply, true);
+          var msg = typeof data.detail === "string" ? data.detail
+            : "Sorry, I couldn't answer that just now. Please try again, or email info@fintoras.com.";
+          finish(msg, false);
+        });
+      }).catch(function () {
+        finish("Sorry, I couldn't reach the assistant. Please try again in a moment, or email info@fintoras.com.", false);
+      });
+    }
+
+    launcher.addEventListener("pointerenter", wakeApi);
+    launcher.addEventListener("click", function () { if (panel.hidden) open(); else close(); });
+    panel.querySelector(".ta-close").addEventListener("click", close);
+    panel.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    form.addEventListener("submit", function (e) { e.preventDefault(); ask(input.value); });
+  })();
+
   /* ---------- blog: topic filter and search ---------- */
   var notes = document.querySelectorAll(".note");
   if (notes.length) {
