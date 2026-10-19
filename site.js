@@ -240,12 +240,12 @@
     suggest();
   }
 
-  /* ---------- Toras Assistant (website chat) ---------- */
+  /* ---------- Toras (website chat) ---------- */
   // Answers questions from the text on this website, through the Fintoras API.
   (function () {
     var KEY = "fintoras-assistant";
     var MAX_KEEP = 10;
-    var GREETING = "Hi, I'm Toras Assistant. Ask me anything about Fintoras: what it does, pricing, the launch, the founder or how to get in touch.";
+    var GREETING = "Hi, I'm Toras. Ask me anything about Fintoras: what it does, pricing, the launch, the founder or how to get in touch.";
     var SUGGESTIONS = ["What does Fintoras do?", "How much does it cost?", "When does it launch?", "Who is behind Fintoras?"];
     var ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 11.5l3-2.5 2.5 2 3-3"/></svg>';
     var X = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
@@ -263,16 +263,16 @@
     launcher.className = "ta-launch";
     launcher.setAttribute("aria-expanded", "false");
     launcher.setAttribute("aria-controls", "toras-assistant");
-    launcher.innerHTML = ICON + "<span>Toras Assistant</span>";
+    launcher.innerHTML = ICON + "<span>Toras</span>";
 
     var panel = document.createElement("section");
     panel.className = "ta-panel";
     panel.id = "toras-assistant";
     panel.hidden = true;
-    panel.setAttribute("aria-label", "Toras Assistant");
+    panel.setAttribute("aria-label", "Toras");
     panel.innerHTML =
-      '<div class="ta-head"><div><h2>Toras Assistant</h2><p>Answers from what is on this website</p></div>' +
-      '<button class="icon-btn ta-close" type="button" aria-label="Close Toras Assistant">' + X + '</button></div>' +
+      '<div class="ta-head"><div><h2>Toras</h2><p>Your guide to Fintoras, answering from this website</p></div>' +
+      '<button class="icon-btn ta-close" type="button" aria-label="Close Toras">' + X + '</button></div>' +
       '<div class="ta-log" role="log" aria-live="polite"></div>' +
       '<div class="ta-chips"></div>' +
       '<form class="ta-form"><label class="sr-only" for="ta-input">Your question</label>' +
@@ -370,7 +370,7 @@
         input.focus();
       }
 
-      if (PREVIEW) { finish("This is a preview copy of the site, so Toras Assistant can't answer here.", false); return; }
+      if (PREVIEW) { finish("This is a preview copy of the site, so Toras can't answer here.", false); return; }
       fetch(API + "/api/v1/assistant", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

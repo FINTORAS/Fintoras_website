@@ -618,7 +618,7 @@ dialog.sheet::backdrop { background: var(--scrim); }
 .page-head .photo { margin-top: 0.75rem; }
 @media (max-width: 640px) { .photo-wide { aspect-ratio: 16 / 9; } }
 
-/* ---------- Toras Assistant (chat) ---------- */
+/* ---------- Toras (chat) ---------- */
 .ta-launch {
   position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 60;
   display: inline-flex; align-items: center; gap: 0.55rem; min-height: 48px; padding: 0 1.1rem 0 0.95rem;
