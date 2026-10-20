@@ -271,7 +271,7 @@
     panel.hidden = true;
     panel.setAttribute("aria-label", "Toras");
     panel.innerHTML =
-      '<div class="ta-head"><div><h2>Toras</h2><p>Your guide to Fintoras, answering from this website</p></div>' +
+      '<div class="ta-head"><div><h2>Toras</h2><p>Your guide to Fintoras</p></div>' +
       '<button class="icon-btn ta-close" type="button" aria-label="Close Toras">' + X + '</button></div>' +
       '<div class="ta-log" role="log" aria-live="polite"></div>' +
       '<div class="ta-chips"></div>' +
